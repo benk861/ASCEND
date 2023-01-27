@@ -72,4 +72,5 @@ void AAbilityBase::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 		AbilityPickedDelegate.Broadcast(this);
 	}
 	Sprite->SetHiddenInGame(true);
+	this->AttachToActor(Player, FAttachmentTransformRules::SnapToTargetIncludingScale);
 }

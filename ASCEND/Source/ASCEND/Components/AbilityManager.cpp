@@ -66,10 +66,12 @@ void UAbilityManager::ActivateAbility(AAbilityBase* Ability)
 		if(Ability->Hand == EAbilityHand::Left)
 		{
 			LeftHandAbilitiesArray.Remove(Ability);
+			Ability->Destroy();
 		}
 		if(Ability->Hand == EAbilityHand::Right)
 		{
 			RightHandAbilitiesArray.Remove(Ability);
+			Ability->Destroy();
 		}
 	}
 }
