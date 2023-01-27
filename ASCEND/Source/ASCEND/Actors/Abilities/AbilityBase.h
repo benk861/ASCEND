@@ -7,6 +7,7 @@
 #include "GameFramework/Actor.h"
 #include "AbilityBase.generated.h"
 
+class APlayerCharacter;
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FAbilityPicked, AAbilityBase*, ActiveAbility);
 
 class UPaperSpriteComponent;
@@ -28,6 +29,12 @@ public:
 
 	UFUNCTION(BlueprintNativeEvent)
 	void UseAbility();
+
+	UFUNCTION(BlueprintNativeEvent)
+	bool CanActivateAbility();
+
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	FORCEINLINE APlayerCharacter* GetAscendPlayer(){return Player;}
 
 	UFUNCTION()
 	void OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit);
@@ -55,4 +62,5 @@ protected:
 
 private:
 	FAbilityPicked AbilityPickedDelegate;
+	APlayerCharacter* Player;
 };

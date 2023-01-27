@@ -29,7 +29,7 @@ void UAbilityManager::ActivatePickedLeftHandAbility()
 	
 	for(AAbilityBase* Ability : LeftHandAbilitiesArray)
 	{
-		if(Ability->bIsPicked)
+		if(Ability->bIsPicked && Ability->CanActivateAbility())
 		{
 			ActivateAbility(Ability);
 		}
@@ -45,7 +45,7 @@ void UAbilityManager::ActivatePickedRightHandAbility()
 	
 	for(AAbilityBase* Ability : RightHandAbilitiesArray)
 	{
-		if(Ability->bIsPicked)
+		if(Ability->bIsPicked && Ability->CanActivateAbility())
 		{
 			ActivateAbility(Ability);
 		}
@@ -54,10 +54,6 @@ void UAbilityManager::ActivatePickedRightHandAbility()
 
 void UAbilityManager::ActivateAbility(AAbilityBase* Ability)
 {
-	if(CanActivateAbility() == false)
-	{
-		return;
-	}
 	Ability->UseAbility();
 	if(Ability->ChargesLeft == 0)
 	{
@@ -134,11 +130,6 @@ void UAbilityManager::CycleThroughRightHand()
 			PickAbility(GetNextAbilityInArray(AbilityInArray));
 		}
 	}
-}
-
-bool UAbilityManager::CanActivateAbility_Implementation()
-{
-	return true;
 }
 
 AAbilityBase* UAbilityManager::GetNextAbilityInArray(AAbilityBase* CurrentAbility)

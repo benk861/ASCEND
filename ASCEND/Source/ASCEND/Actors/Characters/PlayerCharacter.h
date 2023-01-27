@@ -23,6 +23,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	FORCEINLINE UAbilityManager* GetAbilityManager(){return AbilityManager;}
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	bool bCanDoubleJump = true;
 protected:
 	virtual void BeginPlay() override;
 

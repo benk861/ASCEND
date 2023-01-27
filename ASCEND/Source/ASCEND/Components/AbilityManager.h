@@ -27,9 +27,6 @@ public:
 	
 	UFUNCTION(BlueprintCallable)
 	void CycleThroughRightHand();
-
-	UFUNCTION(BlueprintNativeEvent)
-	bool CanActivateAbility();
 	
 	void ActivateAbility(AAbilityBase* Ability);
 
