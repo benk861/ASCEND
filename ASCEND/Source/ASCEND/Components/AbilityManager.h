@@ -45,5 +45,7 @@ protected:
 	UPROPERTY()
 	APlayerCharacter* Character;
 
+	TArray<AAbilityBase*>& FindCorrespondingArray(AAbilityBase* Ability);
+	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 };

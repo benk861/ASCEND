@@ -15,6 +15,20 @@ void UAbilityManager::BeginPlay()
 	Character = Cast<APlayerCharacter>(GetOwner());
 }
 
+TArray<AAbilityBase*>& UAbilityManager::FindCorrespondingArray(AAbilityBase* Ability)
+{
+	if(Ability->Hand == EAbilityHand::Left)
+	{
+		return LeftHandAbilitiesArray;
+	}
+	if(Ability->Hand == EAbilityHand::Right)
+	{
+		return RightHandAbilitiesArray;
+	}
+	UE_LOG(LogTemp, Error, TEXT("Invalid ability hand"))
+	return LeftHandAbilitiesArray;
+}
+
 void UAbilityManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
@@ -33,9 +47,11 @@ void UAbilityManager::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 			{
 				Active = "Not active";
 			}
-			// GEngine->AddOnScreenDebugMessage(5, 1.f, FColor::Yellow, String);
 			UE_LOG(LogTemp, Warning, TEXT("%s %s %s"), *Name, *FString::FromInt(Index), *Active);
 		}
+	} else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Array is empty"));
 	}
 }
 
@@ -76,18 +92,10 @@ void UAbilityManager::ActivateAbility(AAbilityBase* Ability)
 	Ability->UseAbility();
 	if(Ability->ChargesLeft == 0)
 	{
-		GEngine->AddOnScreenDebugMessage(1, 1.f, FColor::Red, "No Charges. Ability Removed");
+		TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
 		PickAbility(GetNextAbilityInArray(Ability));
-		if(Ability->Hand == EAbilityHand::Left)
-		{
-			LeftHandAbilitiesArray.Remove(Ability);
-			Ability->Destroy();
-		}
-		if(Ability->Hand == EAbilityHand::Right)
-		{
-			RightHandAbilitiesArray.Remove(Ability);
-			Ability->Destroy();
-		}
+		CorrespondingArray.Remove(Ability);
+		Ability->Destroy();
 	}
 }
 
@@ -97,49 +105,25 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 	{
 		return;
 	}
-	if(Ability->Hand == EAbilityHand::Left)
+	TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
+	for (AAbilityBase* AbilityInArray : CorrespondingArray)
 	{
-		for (AAbilityBase* AbilityInArray : LeftHandAbilitiesArray)
-		{
-			AbilityInArray->bIsPicked = false;
-		}
-		Ability->bIsPicked = true;
-		
-		TArray<AAbilityBase*> RestructuredArray;
-		RestructuredArray.Add(Ability);
-		
-		for(AAbilityBase* AbilityInArray : LeftHandAbilitiesArray)
-		{	
-			if(AbilityInArray != Ability)
-			{
-				RestructuredArray.Add(AbilityInArray);
-			}
-		}
-		
-		LeftHandAbilitiesArray = RestructuredArray;
+		AbilityInArray->bIsPicked = false;
 	}
+	Ability->bIsPicked = true;
 	
-	if(Ability->Hand == EAbilityHand::Right)
-	{
-		for (AAbilityBase* AbilityInArray : RightHandAbilitiesArray)
+	TArray<AAbilityBase*> RestructuredArray;
+	RestructuredArray.Add(Ability);
+	
+	for(AAbilityBase* AbilityInArray : CorrespondingArray)
+	{	
+		if(AbilityInArray != Ability)
 		{
-			AbilityInArray->bIsPicked = false;
+			RestructuredArray.Add(AbilityInArray);
 		}
-		Ability->bIsPicked = true;
-
-		TArray<AAbilityBase*> RestructuredArray;
-		RestructuredArray.Add(Ability);
-		
-		for(AAbilityBase* AbilityInArray : RightHandAbilitiesArray)
-		{	
-			if(AbilityInArray != Ability)
-			{
-				RestructuredArray.Add(AbilityInArray);
-			}
-		}
-		
-		RightHandAbilitiesArray = RestructuredArray;
 	}
+	CorrespondingArray = RestructuredArray;
+	
 	GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Cyan, Ability->AbilityName.ToString() + " picked up");
 }
 
@@ -179,31 +163,16 @@ void UAbilityManager::CycleThroughRightHand()
 
 AAbilityBase* UAbilityManager::GetNextAbilityInArray(AAbilityBase* CurrentAbility)
 {
-	if(CurrentAbility->Hand == EAbilityHand::Left)
+	TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(CurrentAbility);
+	int32 NumberOfItemsInArray = CorrespondingArray.Num() - 1;
+	int32 CurrentAbilityArrayIndex = CorrespondingArray.Find(CurrentAbility);
+	if(CurrentAbilityArrayIndex == NumberOfItemsInArray)
 	{
-		int32 NumberOfItemsInArray = LeftHandAbilitiesArray.Num() - 1;
-		int32 CurrentAbilityArrayIndex = LeftHandAbilitiesArray.Find(CurrentAbility);
-		if(CurrentAbilityArrayIndex == NumberOfItemsInArray)
-		{
-			return LeftHandAbilitiesArray[0];
-		}
-		if(CurrentAbilityArrayIndex < NumberOfItemsInArray)
-		{
-			return LeftHandAbilitiesArray[CurrentAbilityArrayIndex + 1];
-		}
+		return nullptr;
 	}
-	if(CurrentAbility->Hand == EAbilityHand::Right)
+	if(CurrentAbilityArrayIndex < NumberOfItemsInArray)
 	{
-		int32 NumberOfItemsInArray = RightHandAbilitiesArray.Num() - 1;
-		int32 CurrentAbilityArrayIndex = RightHandAbilitiesArray.Find(CurrentAbility);
-		if(CurrentAbilityArrayIndex == NumberOfItemsInArray)
-		{
-			return RightHandAbilitiesArray[0];
-		}
-		if(CurrentAbilityArrayIndex < NumberOfItemsInArray)
-		{
-			return RightHandAbilitiesArray[CurrentAbilityArrayIndex + 1];
-		}
+		return CorrespondingArray[CurrentAbilityArrayIndex + 1];
 	}
 	return nullptr;
 }
