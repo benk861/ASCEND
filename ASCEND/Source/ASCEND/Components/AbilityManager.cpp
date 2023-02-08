@@ -18,6 +18,25 @@ void UAbilityManager::BeginPlay()
 void UAbilityManager::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	if (!LeftHandAbilitiesArray.IsEmpty())
+	{
+		for(AAbilityBase* Ability : LeftHandAbilitiesArray)
+		{
+			FString Name = Ability->AbilityName.ToString();
+			int32 Index = LeftHandAbilitiesArray.Find(Ability);
+			bool IsActive = Ability->bIsPicked;
+			FString Active;
+			if(IsActive)
+			{
+				Active = "Active";
+			} else
+			{
+				Active = "Not active";
+			}
+			// GEngine->AddOnScreenDebugMessage(5, 1.f, FColor::Yellow, String);
+			UE_LOG(LogTemp, Warning, TEXT("%s %s %s"), *Name, *FString::FromInt(Index), *Active);
+		}
+	}
 }
 
 void UAbilityManager::ActivatePickedLeftHandAbility()
@@ -85,6 +104,19 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 			AbilityInArray->bIsPicked = false;
 		}
 		Ability->bIsPicked = true;
+		
+		TArray<AAbilityBase*> RestructuredArray;
+		RestructuredArray.Add(Ability);
+		
+		for(AAbilityBase* AbilityInArray : LeftHandAbilitiesArray)
+		{	
+			if(AbilityInArray != Ability)
+			{
+				RestructuredArray.Add(AbilityInArray);
+			}
+		}
+		
+		LeftHandAbilitiesArray = RestructuredArray;
 	}
 	
 	if(Ability->Hand == EAbilityHand::Right)
@@ -94,6 +126,19 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 			AbilityInArray->bIsPicked = false;
 		}
 		Ability->bIsPicked = true;
+
+		TArray<AAbilityBase*> RestructuredArray;
+		RestructuredArray.Add(Ability);
+		
+		for(AAbilityBase* AbilityInArray : RightHandAbilitiesArray)
+		{	
+			if(AbilityInArray != Ability)
+			{
+				RestructuredArray.Add(AbilityInArray);
+			}
+		}
+		
+		RightHandAbilitiesArray = RestructuredArray;
 	}
 	GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Cyan, Ability->AbilityName.ToString() + " picked up");
 }
@@ -103,7 +148,7 @@ void UAbilityManager::CycleThroughLeftHand()
 	int32 NumberOfItemsInArray = LeftHandAbilitiesArray.Num();
 	if(NumberOfItemsInArray <= 1)
 	{
-		GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Red, "You have no abilities");
+		GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Red, "You have no other abilities");
 		return;
 	}
 	for (AAbilityBase* AbilityInArray : LeftHandAbilitiesArray)
@@ -120,10 +165,10 @@ void UAbilityManager::CycleThroughRightHand()
 	int32 NumberOfItemsInArray = RightHandAbilitiesArray.Num();
 	if(NumberOfItemsInArray <= 1)
 	{
-		GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Red, "You have no abilities");
+		GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Red, "You have no other abilities");
 		return;
 	}
-	for (AAbilityBase* AbilityInArray : LeftHandAbilitiesArray)
+	for (AAbilityBase* AbilityInArray : RightHandAbilitiesArray)
 	{
 		if(AbilityInArray->bIsPicked)
 		{

@@ -2,7 +2,6 @@
 
 
 #include "ASCEND/Actors/Abilities/AbilityBase.h"
-
 #include "PaperSpriteComponent.h"
 #include "ASCEND/Actors/Characters/PlayerCharacter.h"
 #include "Components/SphereComponent.h"
