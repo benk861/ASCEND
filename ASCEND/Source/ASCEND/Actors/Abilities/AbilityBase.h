@@ -36,6 +36,8 @@ public:
 	UFUNCTION(BlueprintCallable, BlueprintPure)
 	FORCEINLINE APlayerCharacter* GetAscendPlayer(){return Player;}
 
+	bool CheckContainment(TArray<AAbilityBase*>& CorrespondingArray);
+
 	UFUNCTION()
 	void OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit);
 	

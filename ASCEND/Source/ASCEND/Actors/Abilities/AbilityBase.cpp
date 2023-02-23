@@ -38,6 +38,19 @@ bool AAbilityBase::CanActivateAbility_Implementation()
 	return true;
 }
 
+bool AAbilityBase::CheckContainment(TArray<AAbilityBase*>& CorrespondingArray)
+{
+	for (AAbilityBase* AbilityInArray : CorrespondingArray)
+	{
+		if (AbilityInArray->AbilityName == AbilityName)
+		{
+			AbilityInArray->ChargesLeft += MaxCharges;
+			return true;
+		}
+	}
+	return false;
+}
+
 void AAbilityBase::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
                              UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit)
 {
@@ -49,29 +62,22 @@ void AAbilityBase::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 	}
 	if(Hand == EAbilityHand::Left)
 	{
-		if(!AbilityManager->LeftHandAbilitiesArray.Contains(this))
+		if(!CheckContainment(AbilityManager->LeftHandAbilitiesArray))
 		{
 			AbilityManager->LeftHandAbilitiesArray.AddUnique(this);
-		}
-		else
-		{
-			ChargesLeft += MaxCharges;
+			Player->GetAbilityManager()->PickAbility(this);
 		}
 		
 	} else if(Hand == EAbilityHand::Right)
 	{
-		if(!AbilityManager->RightHandAbilitiesArray.Contains(this))
+		if(!CheckContainment(AbilityManager->RightHandAbilitiesArray))
 		{
 			AbilityManager->RightHandAbilitiesArray.AddUnique(this);
-		}
-		else
-		{
-			ChargesLeft += MaxCharges;
+			Player->GetAbilityManager()->PickAbility(this);
 		}
 	}
 
 	PickupCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	Player->GetAbilityManager()->PickAbility(this);
 	if(AbilityPickedDelegate.IsBound())
 	{
 		AbilityPickedDelegate.Broadcast(this);

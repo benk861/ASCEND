@@ -111,6 +111,7 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 		AbilityInArray->bIsPicked = false;
 	}
 	Ability->bIsPicked = true;
+	UE_LOG(LogTemp, Warning, TEXT("True"));
 	GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Cyan, Ability->AbilityName.ToString() + " picked up");
 }
 
