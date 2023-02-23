@@ -93,7 +93,7 @@ void UAbilityManager::ActivateAbility(AAbilityBase* Ability)
 	if(Ability->ChargesLeft == 0)
 	{
 		TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
-		PickAbility(GetNextAbilityInArray(Ability));
+		GetNextAbilityInArray(Ability)->bIsPicked = true;
 		CorrespondingArray.Remove(Ability);
 		Ability->Destroy();
 	}
@@ -111,19 +111,6 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 		AbilityInArray->bIsPicked = false;
 	}
 	Ability->bIsPicked = true;
-	
-	TArray<AAbilityBase*> RestructuredArray;
-	RestructuredArray.Add(Ability);
-	
-	for(AAbilityBase* AbilityInArray : CorrespondingArray)
-	{	
-		if(AbilityInArray != Ability)
-		{
-			RestructuredArray.Add(AbilityInArray);
-		}
-	}
-	CorrespondingArray = RestructuredArray;
-	
 	GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Cyan, Ability->AbilityName.ToString() + " picked up");
 }
 
@@ -137,9 +124,13 @@ void UAbilityManager::CycleThroughLeftHand()
 	}
 	for (AAbilityBase* AbilityInArray : LeftHandAbilitiesArray)
 	{
-		if(AbilityInArray->bIsPicked)
+		if (AbilityInArray->bIsPicked)
 		{
-			PickAbility(GetNextAbilityInArray(AbilityInArray));
+			AbilityInArray->bIsPicked = false;
+			AAbilityBase* NextAbility = GetNextAbilityInArray(AbilityInArray);
+			NextAbility->bIsPicked = true;
+			GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Cyan, NextAbility->AbilityName.ToString() + " picked up");
+			return;
 		}
 	}
 }
@@ -156,19 +147,24 @@ void UAbilityManager::CycleThroughRightHand()
 	{
 		if(AbilityInArray->bIsPicked)
 		{
-			PickAbility(GetNextAbilityInArray(AbilityInArray));
+			AbilityInArray->bIsPicked = false;
+			AAbilityBase* NextAbility = GetNextAbilityInArray(AbilityInArray);
+			NextAbility->bIsPicked = true;
+			GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Cyan, NextAbility->AbilityName.ToString() + " picked up");
+			return;
 		}
 	}
 }
 
 AAbilityBase* UAbilityManager::GetNextAbilityInArray(AAbilityBase* CurrentAbility)
 {
+	
 	TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(CurrentAbility);
 	int32 NumberOfItemsInArray = CorrespondingArray.Num() - 1;
 	int32 CurrentAbilityArrayIndex = CorrespondingArray.Find(CurrentAbility);
 	if(CurrentAbilityArrayIndex == NumberOfItemsInArray)
 	{
-		return nullptr;
+		return CorrespondingArray[0];
 	}
 	if(CurrentAbilityArrayIndex < NumberOfItemsInArray)
 	{
