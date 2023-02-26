@@ -7,6 +7,14 @@
 #include "Components/ActorComponent.h"
 #include "AbilityManager.generated.h"
 
+//TODO make it so it's doesn't need separate delegated for each hand
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLeftAbilityPicked, AAbilityBase*, Ability);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FRightAbilityPicked, AAbilityBase*, Ability);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLeftAbilityRemoved, AAbilityBase*, Ability);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FRightAbilityRemoved, AAbilityBase*, Ability);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FLeftAbilityUsed, AAbilityBase*, Ability);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FRightAbilityUsed, AAbilityBase*, Ability);
+
 class APlayerCharacter;
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ASCEND_API UAbilityManager : public UActorComponent
@@ -39,6 +47,16 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	TArray<AAbilityBase*> RightHandAbilitiesArray;
+
+	FLeftAbilityPicked LeftHandAbilityDelegate;
+	FRightAbilityPicked RightHandAbilityDelegate;
+	FLeftAbilityRemoved LeftAbilityRemovedDelegate;
+	FRightAbilityRemoved RightAbilityRemovedDelegate;
+	FLeftAbilityUsed LeftAbilityUsed;
+	FRightAbilityUsed RightAbilityUsed;
+
+	UFUNCTION(BlueprintCallable)
+	int32 GetAbilityIndexInArray(AAbilityBase* Ability);
 protected:
 	virtual void BeginPlay() override;
 

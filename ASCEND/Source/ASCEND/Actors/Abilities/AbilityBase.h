@@ -51,16 +51,17 @@ public:
 	EAbilityHand Hand;
 	
 	bool bIsPicked = false;
-	
+
+	UPROPERTY(BlueprintReadOnly)
 	int32 ChargesLeft = 0;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPaperSpriteComponent* Sprite;
 protected:
 	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere)
 	USphereComponent* PickupCollision = nullptr;
-
-	UPROPERTY(EditAnywhere)
-	UPaperSpriteComponent* Sprite;
 
 private:
 	FAbilityPicked AbilityPickedDelegate;
