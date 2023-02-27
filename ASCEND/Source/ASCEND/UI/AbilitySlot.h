@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "AbilitySlot.generated.h"
-
 class UImage;
 class UTextBlock;
 /**
@@ -16,9 +15,8 @@ class ASCEND_API UAbilitySlot : public UUserWidget
 {
 	GENERATED_BODY()
 public:
-
 	virtual void NativeConstruct() override;
-	
+
 	UPROPERTY()
 	UTextBlock* ChargesLeft;
 

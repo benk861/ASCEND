@@ -2,9 +2,6 @@
 
 
 #include "ASCEND/UI/AbilitySlot.h"
-#include "Blueprint/WidgetTree.h"
-#include "Components/CanvasPanel.h"
-#include "Components/TextBlock.h"
 
 void UAbilitySlot::NativeConstruct()
 {

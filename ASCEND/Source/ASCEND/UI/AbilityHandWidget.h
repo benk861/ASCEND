@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "AbilityHandWidget.generated.h"
-
 enum class EAbilityHand : uint8;
 /**
  * 
@@ -28,5 +27,4 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	EAbilityHand Hand;
-
 };
