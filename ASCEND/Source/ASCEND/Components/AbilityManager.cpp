@@ -3,6 +3,7 @@
 
 #include "ASCEND/Components/AbilityManager.h"
 #include "ASCEND/Actors/Characters/PlayerCharacter.h"
+#include <Kismet/GameplayStatics.h>
 
 UAbilityManager::UAbilityManager()
 {
@@ -18,6 +19,12 @@ void UAbilityManager::BeginPlay()
 {
 	Super::BeginPlay();
 	Character = Cast<APlayerCharacter>(GetOwner());
+	GameInstance = Cast<UASCENDGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+}
+
+TArray<AAbilityBase*>& UAbilityManager::FindInstanceArray(UASCENDGameInstance* GivenInstance)
+{
+	return GivenInstance->Abilities;
 }
 
 TArray<AAbilityBase*>& UAbilityManager::FindCorrespondingArray(AAbilityBase* Ability)
@@ -72,6 +79,7 @@ void UAbilityManager::ActivatePickedLeftHandAbility()
 		if(Ability->bIsPicked && Ability->CanActivateAbility())
 		{
 			ActivateAbility(Ability);
+			return;
 		}
 	}
 }
@@ -88,6 +96,7 @@ void UAbilityManager::ActivatePickedRightHandAbility()
 		if(Ability->bIsPicked && Ability->CanActivateAbility())
 		{
 			ActivateAbility(Ability);
+			return;
 		}
 	}
 }
@@ -96,7 +105,7 @@ void UAbilityManager::ActivateAbility(AAbilityBase* Ability)
 {
 	Ability->UseAbility();
 	
-	if(Ability->Hand == EAbilityHand::Left)
+	if (Ability->Hand == EAbilityHand::Left)
 	{
 		if(LeftAbilityUsed.IsBound())
 		{
@@ -117,18 +126,17 @@ void UAbilityManager::ActivateAbility(AAbilityBase* Ability)
 			if(LeftAbilityRemovedDelegate.IsBound())
 			{
 				LeftAbilityRemovedDelegate.Broadcast(Ability);
-			}	
+			}
 		} else if(Ability->Hand == EAbilityHand::Right)
 		{
 			if(RightAbilityRemovedDelegate.IsBound())
 			{
 				RightAbilityRemovedDelegate.Broadcast(Ability);
-			}	
+			}
 		}
 		TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
 		GetNextAbilityInArray(Ability)->bIsPicked = true;
 		CorrespondingArray.Remove(Ability);
-		Ability->Destroy();
 	}
 }
 
@@ -137,6 +145,11 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 	if(!Ability)
 	{
 		return;
+	}
+	Ability->bActive = false;
+	if (GameInstance)
+	{
+		FindInstanceArray(GameInstance).Add(Ability);
 	}
 	TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
 	for (AAbilityBase* AbilityInArray : CorrespondingArray)

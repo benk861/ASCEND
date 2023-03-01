@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "ASCEND/Actors/Abilities/AbilityBase.h"
 #include "Components/ActorComponent.h"
+#include "ASCEND/ASCENDGameInstance.h"
 #include "AbilityManager.generated.h"
 
 //TODO make it so it's doesn't need separate delegated for each hand
@@ -60,8 +61,12 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
+	TArray<AAbilityBase*>& FindInstanceArray(UASCENDGameInstance* GameInstance);
+
 	UPROPERTY()
-	APlayerCharacter* Character;
+	APlayerCharacter* Character = nullptr;
+	UPROPERTY()
+	UASCENDGameInstance* GameInstance = nullptr;
 
 	TArray<AAbilityBase*>& FindCorrespondingArray(AAbilityBase* Ability);
 	

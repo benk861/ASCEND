@@ -17,6 +17,7 @@ AAbilityBase::AAbilityBase()
 void AAbilityBase::BeginPlay()
 {
 	Super::BeginPlay();
+	BegininigTransform = this->GetTransform();
 	ChargesLeft = MaxCharges;
 	PickupCollision->OnComponentBeginOverlap.AddDynamic(this, &AAbilityBase::OnOverlap);
 }
@@ -84,4 +85,16 @@ void AAbilityBase::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 	}
 	Sprite->SetHiddenInGame(true);
 	this->AttachToActor(Player, FAttachmentTransformRules::SnapToTargetIncludingScale);
+}
+
+void AAbilityBase::Reactivate()
+{
+	if (!bActive)
+	{
+		ChargesLeft = MaxCharges;
+		this->SetActorTransform(BegininigTransform);
+		PickupCollision->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+		Sprite->SetHiddenInGame(false);
+		bActive = true;
+	}
 }

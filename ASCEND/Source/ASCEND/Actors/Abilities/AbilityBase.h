@@ -40,17 +40,22 @@ public:
 
 	UFUNCTION()
 	void OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit);
+
+	UFUNCTION(BlueprintCallable)
+	void Reactivate();
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Ability description")
 	FName AbilityName;
 	
-	UPROPERTY(EditDefaultsOnly, Category = "Ability description")
+	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Ability description")
 	int32 MaxCharges = 3;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability description")
 	EAbilityHand Hand;
 	
 	bool bIsPicked = false;
+
+	bool bActive = true;
 
 	UPROPERTY(BlueprintReadOnly)
 	int32 ChargesLeft = 0;
@@ -64,6 +69,7 @@ protected:
 	USphereComponent* PickupCollision = nullptr;
 
 private:
+	FTransform BegininigTransform;
 	FAbilityPicked AbilityPickedDelegate;
 	APlayerCharacter* Player;
 };
