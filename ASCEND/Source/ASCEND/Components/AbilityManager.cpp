@@ -19,12 +19,6 @@ void UAbilityManager::BeginPlay()
 {
 	Super::BeginPlay();
 	Character = Cast<APlayerCharacter>(GetOwner());
-	GameInstance = Cast<UASCENDGameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
-}
-
-TArray<AAbilityBase*>& UAbilityManager::FindInstanceArray(UASCENDGameInstance* GivenInstance)
-{
-	return GivenInstance->Abilities;
 }
 
 TArray<AAbilityBase*>& UAbilityManager::FindCorrespondingArray(AAbilityBase* Ability)
@@ -137,6 +131,7 @@ void UAbilityManager::ActivateAbility(AAbilityBase* Ability)
 		TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
 		GetNextAbilityInArray(Ability)->bIsPicked = true;
 		CorrespondingArray.Remove(Ability);
+		Ability->Destroy();
 	}
 }
 
@@ -145,11 +140,6 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 	if(!Ability)
 	{
 		return;
-	}
-	Ability->bActive = false;
-	if (GameInstance)
-	{
-		FindInstanceArray(GameInstance).Add(Ability);
 	}
 	TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
 	for (AAbilityBase* AbilityInArray : CorrespondingArray)

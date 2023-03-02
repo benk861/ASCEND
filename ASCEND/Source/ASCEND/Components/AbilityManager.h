@@ -61,12 +61,8 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	TArray<AAbilityBase*>& FindInstanceArray(UASCENDGameInstance* GameInstance);
-
 	UPROPERTY()
 	APlayerCharacter* Character = nullptr;
-	UPROPERTY()
-	UASCENDGameInstance* GameInstance = nullptr;
 
 	TArray<AAbilityBase*>& FindCorrespondingArray(AAbilityBase* Ability);
 	
