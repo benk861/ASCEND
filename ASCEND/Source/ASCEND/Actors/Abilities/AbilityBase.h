@@ -47,7 +47,7 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Ability description")
 	FName AbilityName;
 	
-	UPROPERTY(BlueprintReadWrite, EditDefaultsOnly, Category = "Ability description")
+	UPROPERTY(EditDefaultsOnly, Category = "Ability description")
 	int32 MaxCharges = 3;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Ability description")
@@ -64,6 +64,13 @@ public:
 	UPaperSpriteComponent* Sprite;
 protected:
 	virtual void BeginPlay() override;
+
+	UFUNCTION(BlueprintCallable)
+	void SetChargesLeft(int32 NewChargesLeft);
+	UFUNCTION(BlueprintCallable)
+	void SetMaxCharges(int32 Charges);
+	UFUNCTION(BlueprintCallable, BlueprintPure)
+	int32 GetMaxCharges();
 
 	UPROPERTY(EditAnywhere)
 	USphereComponent* PickupCollision = nullptr;

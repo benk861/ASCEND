@@ -22,6 +22,21 @@ void AAbilityBase::BeginPlay()
 	PickupCollision->OnComponentBeginOverlap.AddDynamic(this, &AAbilityBase::OnOverlap);
 }
 
+void AAbilityBase::SetChargesLeft(int32 NewChargesLeft)
+{
+	ChargesLeft = NewChargesLeft;
+}
+
+void AAbilityBase::SetMaxCharges(int32 Charges)
+{
+	MaxCharges = Charges;
+}
+
+int32 AAbilityBase::GetMaxCharges()
+{
+	return MaxCharges;
+}
+
 void AAbilityBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
