@@ -60,7 +60,7 @@ bool AAbilityBase::CheckContainment(TArray<AAbilityBase*>& CorrespondingArray)
 	{
 		if (AbilityInArray->AbilityName == AbilityName)
 		{
-			AbilityInArray->ChargesLeft += MaxCharges;
+			AbilityInArray->ChargesLeft = MaxCharges;
 			return true;
 		}
 	}
