@@ -79,4 +79,5 @@ private:
 	FTransform BegininigTransform;
 	FAbilityPicked AbilityPickedDelegate;
 	APlayerCharacter* Player;
+	bool bShouldBePicked = true;
 };

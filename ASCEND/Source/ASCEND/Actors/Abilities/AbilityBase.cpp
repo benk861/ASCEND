@@ -60,7 +60,12 @@ bool AAbilityBase::CheckContainment(TArray<AAbilityBase*>& CorrespondingArray)
 	{
 		if (AbilityInArray->AbilityName == AbilityName)
 		{
-			AbilityInArray->ChargesLeft = MaxCharges;
+			if (AbilityInArray->ChargesLeft != MaxCharges)
+			{
+				AbilityInArray->ChargesLeft = MaxCharges;
+				bShouldBePicked = true;
+			}
+			else bShouldBePicked = false;
 			return true;
 		}
 	}
@@ -93,13 +98,16 @@ void AAbilityBase::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 		}
 	}
 
-	PickupCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	if(AbilityPickedDelegate.IsBound())
+	if (bShouldBePicked)
 	{
-		AbilityPickedDelegate.Broadcast(this);
+		PickupCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		if (AbilityPickedDelegate.IsBound())
+		{
+			AbilityPickedDelegate.Broadcast(this);
+		}
+		Sprite->SetHiddenInGame(true);
+		this->AttachToActor(Player, FAttachmentTransformRules::SnapToTargetIncludingScale);
 	}
-	Sprite->SetHiddenInGame(true);
-	this->AttachToActor(Player, FAttachmentTransformRules::SnapToTargetIncludingScale);
 }
 
 void AAbilityBase::Reactivate()
