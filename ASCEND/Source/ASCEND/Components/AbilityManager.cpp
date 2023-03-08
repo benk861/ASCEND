@@ -141,6 +141,7 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 	{
 		return;
 	}
+	Ability->bActive = false;
 	TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
 	for (AAbilityBase* AbilityInArray : CorrespondingArray)
 	{

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/Actor.h"
+#include "Math/Vector.h"
 #include "AbilityBase.generated.h"
 
 class APlayerCharacter;
@@ -44,6 +45,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void Reactivate();
 	
+	UFUNCTION()
+	void RotateSpriteToPlayer();
+
 	UPROPERTY(EditDefaultsOnly, Category = "Ability description")
 	FName AbilityName;
 	
@@ -79,5 +83,7 @@ private:
 	FTransform BegininigTransform;
 	FAbilityPicked AbilityPickedDelegate;
 	APlayerCharacter* Player;
+	APlayerCameraManager* CameraManager;
 	bool bShouldBePicked = true;
+	FRotator BeginningRotation;
 };

@@ -4,7 +4,9 @@
 #include "ASCEND/Actors/Abilities/AbilityBase.h"
 #include "PaperSpriteComponent.h"
 #include "ASCEND/Actors/Characters/PlayerCharacter.h"
+#include "Kismet/GameplayStatics.h"
 #include "Components/SphereComponent.h"
+#include "Kismet/KismetMathLibrary.h"
 
 AAbilityBase::AAbilityBase()
 {
@@ -20,6 +22,8 @@ void AAbilityBase::BeginPlay()
 	BegininigTransform = this->GetTransform();
 	ChargesLeft = MaxCharges;
 	PickupCollision->OnComponentBeginOverlap.AddDynamic(this, &AAbilityBase::OnOverlap);
+	CameraManager = UGameplayStatics::UGameplayStatics::GetPlayerCameraManager(GetWorld(), 0);
+	BeginningRotation = Sprite->GetRelativeRotation();
 }
 
 void AAbilityBase::SetChargesLeft(int32 NewChargesLeft)
@@ -40,7 +44,10 @@ int32 AAbilityBase::GetMaxCharges()
 void AAbilityBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	if (bActive && CameraManager)
+	{
+		RotateSpriteToPlayer();
+	}
 }
 
 void AAbilityBase::UseAbility_Implementation()
@@ -120,4 +127,12 @@ void AAbilityBase::Reactivate()
 		Sprite->SetHiddenInGame(false);
 		bActive = true;
 	}
+}
+
+void AAbilityBase::RotateSpriteToPlayer()
+{
+	FRotator Direction = UKismetMathLibrary::FindLookAtRotation(CameraManager->GetCameraLocation(), this->GetActorLocation());
+	Direction.Roll = 0;
+	Direction.Pitch = 0;
+	Sprite->SetWorldRotation(Direction + FRotator(0,90,0) + BeginningRotation);
 }
