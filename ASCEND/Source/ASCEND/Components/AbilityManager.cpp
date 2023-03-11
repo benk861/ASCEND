@@ -10,9 +10,24 @@ UAbilityManager::UAbilityManager()
 	PrimaryComponentTick.bCanEverTick = true;
 }
 
+int32 UAbilityManager::IndexByName(TArray<AAbilityBase*>& CorrespondingArray, AAbilityBase* Ability)
+{
+	int32 i = 0;
+	for (AAbilityBase* AbilityInArray : CorrespondingArray)
+	{
+		if (AbilityInArray->AbilityName == Ability->AbilityName)
+		{
+			return i;
+		}
+		i++;
+	}
+	return INDEX_NONE;
+}
+
 int32 UAbilityManager::GetAbilityIndexInArray(AAbilityBase* Ability)
 {
-	return FindCorrespondingArray(Ability).IndexOfByKey(Ability);
+	return IndexByName(FindCorrespondingArray(Ability), Ability);
+	//return FindCorrespondingArray(Ability).IndexOfByKey(Ability);
 }
 
 void UAbilityManager::BeginPlay()
@@ -141,6 +156,24 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 	{
 		return;
 	}
+	if (Ability->Hand == EAbilityHand::Left)
+	{
+		if (LeftHandAbilityDelegate.IsBound())
+		{
+			LeftHandAbilityDelegate.Broadcast(Ability);
+		}
+	}
+	else if (Ability->Hand == EAbilityHand::Right)
+	{
+		if (RightHandAbilityDelegate.IsBound())
+		{
+			RightHandAbilityDelegate.Broadcast(Ability);
+		}
+	}
+	if (!Ability->bPickIt)
+	{
+		return;
+	}
 	Ability->bActive = false;
 	TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
 	for (AAbilityBase* AbilityInArray : CorrespondingArray)
@@ -148,19 +181,6 @@ void UAbilityManager::PickAbility(AAbilityBase* Ability)
 		AbilityInArray->bIsPicked = false;
 	}
 	Ability->bIsPicked = true;
-	if(Ability->Hand == EAbilityHand::Left)
-	{
-		if(LeftHandAbilityDelegate.IsBound())
-		{
-			LeftHandAbilityDelegate.Broadcast(Ability);
-		}	
-	} else if(Ability->Hand == EAbilityHand::Right)
-	{
-		if(RightHandAbilityDelegate.IsBound())
-		{
-			RightHandAbilityDelegate.Broadcast(Ability);
-		}	
-	}
 	UE_LOG(LogTemp, Warning, TEXT("True"));
 	GEngine->AddOnScreenDebugMessage(0, 1.f, FColor::Cyan, Ability->AbilityName.ToString() + " picked up");
 }

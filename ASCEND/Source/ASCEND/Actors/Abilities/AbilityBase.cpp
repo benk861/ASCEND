@@ -92,7 +92,13 @@ void AAbilityBase::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 	{
 		if(!CheckContainment(AbilityManager->LeftHandAbilitiesArray))
 		{
+			bPickIt = true;
 			AbilityManager->LeftHandAbilitiesArray.AddUnique(this);
+			Player->GetAbilityManager()->PickAbility(this);
+		}
+		else
+		{
+			bPickIt = false;
 			Player->GetAbilityManager()->PickAbility(this);
 		}
 		
@@ -100,7 +106,13 @@ void AAbilityBase::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
 	{
 		if(!CheckContainment(AbilityManager->RightHandAbilitiesArray))
 		{
-			AbilityManager->RightHandAbilitiesArray.AddUnique(this);
+			bPickIt = true;
+			AbilityManager->LeftHandAbilitiesArray.AddUnique(this);
+			Player->GetAbilityManager()->PickAbility(this);
+		}
+		else
+		{
+			bPickIt = false;
 			Player->GetAbilityManager()->PickAbility(this);
 		}
 	}

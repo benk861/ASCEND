@@ -58,6 +58,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	int32 GetAbilityIndexInArray(AAbilityBase* Ability);
+
+	UFUNCTION(BlueprintCallable)
+	int32 IndexByName(TArray<AAbilityBase*>& CorrespondingArray, AAbilityBase* Ability1);
 protected:
 	virtual void BeginPlay() override;
 
@@ -67,4 +70,5 @@ protected:
 	TArray<AAbilityBase*>& FindCorrespondingArray(AAbilityBase* Ability);
 	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
 };

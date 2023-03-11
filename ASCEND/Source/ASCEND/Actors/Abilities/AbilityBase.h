@@ -61,10 +61,12 @@ public:
 
 	bool bActive = true;
 
-	UPROPERTY(BlueprintReadOnly)
+	bool bPickIt = true;
+
+	UPROPERTY(BlueprintReadWrite)
 	int32 ChargesLeft = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	UPaperSpriteComponent* Sprite;
 protected:
 	virtual void BeginPlay() override;
