@@ -22,4 +22,7 @@ public:
 
 	UPROPERTY()
 	UImage* AbilitySprite;
+
+	UPROPERTY(BlueprintReadWrite)
+	int number;
 };

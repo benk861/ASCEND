@@ -67,6 +67,7 @@ protected:
 	UPROPERTY()
 	APlayerCharacter* Character = nullptr;
 
+	UFUNCTION(BlueprintCallable)
 	TArray<AAbilityBase*>& FindCorrespondingArray(AAbilityBase* Ability);
 	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;

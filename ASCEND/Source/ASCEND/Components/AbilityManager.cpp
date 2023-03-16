@@ -130,22 +130,23 @@ void UAbilityManager::ActivateAbility(AAbilityBase* Ability)
 	
 	if(Ability->ChargesLeft == 0)
 	{
-		if(Ability->Hand == EAbilityHand::Left)
+		TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
+		GetNextAbilityInArray(Ability)->bIsPicked = true;
+		CorrespondingArray.Remove(Ability);
+		if (Ability->Hand == EAbilityHand::Left)
 		{
-			if(LeftAbilityRemovedDelegate.IsBound())
+			if (LeftAbilityRemovedDelegate.IsBound())
 			{
 				LeftAbilityRemovedDelegate.Broadcast(Ability);
 			}
-		} else if(Ability->Hand == EAbilityHand::Right)
+		}
+		else if (Ability->Hand == EAbilityHand::Right)
 		{
-			if(RightAbilityRemovedDelegate.IsBound())
+			if (RightAbilityRemovedDelegate.IsBound())
 			{
 				RightAbilityRemovedDelegate.Broadcast(Ability);
 			}
 		}
-		TArray<AAbilityBase*>& CorrespondingArray = FindCorrespondingArray(Ability);
-		GetNextAbilityInArray(Ability)->bIsPicked = true;
-		CorrespondingArray.Remove(Ability);
 		Ability->Destroy();
 	}
 }
