@@ -37,6 +37,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void CycleThroughRightHand();
 	
+	UFUNCTION(BlueprintCallable)
 	void ActivateAbility(AAbilityBase* Ability);
 
 	void PickAbility(AAbilityBase* Ability);
