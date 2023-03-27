@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F9A954D2-8750-4046-8E62-7F1FF7D9BD2B}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{F9A954D2-8750-4046-8E62-7F1FF7D9BD2B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F9A954D2-8750-4046-8E62-7F1FF7D9BD2B}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Abilities" ID="{0126DF57-1730-492B-A3F3-31A1FE474F6C}" ShortID="1036466253">
+					<ChildrenList>
+						<Folder Name="Mine" ID="{54064D0F-12C4-4919-92F4-F07DD1889200}" ShortID="212630604">
+							<ChildrenList>
+								<Event Name="Mine_Explode" ID="{80D24DEC-AD47-4E17-B85D-3E23F87E1BDB}">
+									<ChildrenList>
+										<Action Name="" ID="{1B69E978-B69E-4D79-AA01-ED4EFC024A92}" ShortID="224852118">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Mine_Explode" ID="{F78654F6-8C7E-405D-AEE6-E6C854626007}" WorkUnitID="{EEDB3B3F-7F2A-4DA3-A7CF-C557FE9D5F64}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

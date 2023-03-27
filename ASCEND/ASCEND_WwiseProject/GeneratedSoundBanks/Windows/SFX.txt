@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3403979510	Mine_Explode			\Default Work Unit\Abilities\Mine\Mine_Explode	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	746896975	Mine_Explode	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\mine_explode_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilities\Mine\Mine_Explode		223860
+
