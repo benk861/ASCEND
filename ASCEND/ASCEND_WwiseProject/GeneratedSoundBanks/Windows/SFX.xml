@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
+	<SoundBanks>
+		<SoundBank Id="393239870" Type="User" GUID="{E9495B30-8B7A-4392-8AF5-84EC0F4B97AB}" Language="SFX" Hash="{4F558201-E9B1-3174-F92B-E4E4BD13016D}">
+			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
+			<ShortName>SFX</ShortName>
+			<Path>SFX.bnk</Path>
+			<Media>
+				<File Id="574870632" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>mine_explode.wav</ShortName>
+					<CachePath>SFX/mine_explode_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3403979510" Name="Mine_Explode" ObjectPath="\Events\Default Work Unit\Abilites\Mine\Mine_Explode" GUID="{91E9F18C-E140-4971-9832-5637091598CA}" DurationType="OneShot" DurationMin="1.1611563" DurationMax="1.1719373">
+					<MediaRefs>
+						<MediaRef Id="574870632"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{C1FA7622-B642-C258-77D9-D74341EA1F35}</FileHash>
+</SoundBanksInfo>
