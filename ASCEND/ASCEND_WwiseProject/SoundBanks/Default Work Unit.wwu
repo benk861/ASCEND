@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{716148CF-2F4C-4BF6-9FE0-387924C32487}" SchemaVersion="110">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{716148CF-2F4C-4BF6-9FE0-387924C32487}" PersistMode="Standalone">
-			<ChildrenList>
-				<SoundBank Name="Music" ID="{AA2745A3-8D65-450B-AFA5-15F46679DF15}">
-					<ObjectInclusionList/>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
-				<SoundBank Name="SFX" ID="{E9495B30-8B7A-4392-8AF5-84EC0F4B97AB}">
-					<ObjectInclusionList>
-						<ObjectRef Name="Mine_Explode" ID="{91E9F18C-E140-4971-9832-5637091598CA}" WorkUnitID="{F9A954D2-8750-4046-8E62-7F1FF7D9BD2B}" Origin="Manual" Filter="7"/>
-					</ObjectInclusionList>
-					<ObjectExclusionList/>
-					<GameSyncExclusionList/>
-				</SoundBank>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{716148CF-2F4C-4BF6-9FE0-387924C32487}" PersistMode="Standalone"/>
 	</SoundBanks>
 </WwiseDocument>
