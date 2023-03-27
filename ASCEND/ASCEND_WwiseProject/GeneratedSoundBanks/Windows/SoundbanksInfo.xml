@@ -9,11 +9,19 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" GUID="{E9495B30-8B7A-4392-8AF5-84EC0F4B97AB}" Language="SFX" Hash="{4F558201-E9B1-3174-F92B-E4E4BD13016D}">
+		<SoundBank Id="393239870" Type="User" GUID="{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}" Language="SFX" Hash="{474A0D6F-8F32-2F96-48E6-FBE19F4D0262}">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
+				<File Id="115031490" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stomp_noise.wav</ShortName>
+					<CachePath>SFX/stomp_noise_908078E1.wem</CachePath>
+				</File>
+				<File Id="339216249" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stomp_hit.wav</ShortName>
+					<CachePath>SFX/stomp_hit_10C4C929.wem</CachePath>
+				</File>
 				<File Id="574870632" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mine_explode.wav</ShortName>
 					<CachePath>SFX/mine_explode_10C4C929.wem</CachePath>
@@ -25,9 +33,20 @@
 						<MediaRef Id="574870632"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2391121158" Name="Stomp_Hit" ObjectPath="\Events\Default Work Unit\Abilites\Stomp\Stomp_Hit" GUID="{83962DD9-EA90-47C7-99B6-39FF53E933A8}" DurationType="OneShot" DurationMin="0.43304166" DurationMax="0.43304166">
+					<MediaRefs>
+						<MediaRef Id="115031490"/>
+						<MediaRef Id="339216249"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="10814438" Name="Stomp_InAir" ObjectPath="\Events\Default Work Unit\Abilites\Stomp\Stomp_InAir" GUID="{20903FB4-CE5F-42CE-AE5D-91C4EE65916F}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="115031490"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+		<SoundBank Id="1355168291" Type="User" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX" Hash="{6FE20D43-1416-1D98-033A-82E29C851866}">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -41,11 +60,11 @@
 				<Bus Id="3803692087" Name="Master Audio Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus" GUID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3991942870" Type="User" GUID="{AA2745A3-8D65-450B-AFA5-15F46679DF15}" Language="SFX" Hash="{0E3E9487-2562-8161-CF73-30D6CFA3E27A}">
+		<SoundBank Id="3991942870" Type="User" GUID="{5BDE35D4-3625-4ACD-9405-0A539A506E34}" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8F358015-3139-9C91-C942-0626923E2157}</FileHash>
+	<FileHash>{1A96C70C-9397-187C-69CB-5F8607BC5CDD}</FileHash>
 </SoundBanksInfo>

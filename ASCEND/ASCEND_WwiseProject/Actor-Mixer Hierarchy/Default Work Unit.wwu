@@ -4,6 +4,10 @@
 		<WorkUnit Name="Default Work Unit" ID="{EEDB3B3F-7F2A-4DA3-A7CF-C557FE9D5F64}" PersistMode="Standalone">
 			<ChildrenList>
 				<Folder Name="Abilites" ID="{7653EE37-E915-4B2E-A9D4-5249A7BDEC87}" ShortID="789110974">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="1"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
 					<ChildrenList>
 						<Folder Name="Mine" ID="{22AD6A0A-8B07-4310-A1C1-36372916837D}" ShortID="425422158">
 							<ChildrenList>
@@ -23,9 +27,6 @@
 											</ModifierList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-10</Value>
-											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{26D240E3-61A0-4F5D-930B-164F68EF6BC3}">
@@ -57,6 +58,65 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="mine_explode" ID="{E484E8C9-6875-49D3-B3A6-E82854757126}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+						<Folder Name="Stomp" ID="{61C4C321-667D-4A3E-B7D2-F602BDD781DA}" ShortID="346304390">
+							<ChildrenList>
+								<Sound Name="stomp_noise" ID="{D90FD8C7-C6C0-4529-A844-1EB4052F8CD9}" ShortID="96665856">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7678B275-AB76-43D5-BFF0-E60B6B800F67}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="stomp_noise" ID="{A1BA947E-570A-463B-9DFB-6CB4E909D439}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.465872751284485"/>
+												<Property Name="LoopBegin" Type="Real64" Value="1.48375738655172"/>
+												<Property Name="LoopEnd" Type="Real64" Value="2.46677772689382"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.961145210383167"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.46679653991908"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>stomp_noise.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="115031490"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="stomp_noise" ID="{A1BA947E-570A-463B-9DFB-6CB4E909D439}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="stomp_hit" ID="{3EE6A930-2026-46C9-A6F3-32FB9D038B5E}" ShortID="1057517717">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7678B275-AB76-43D5-BFF0-E60B6B800F67}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="stomp_hit" ID="{305C7494-CFBB-4384-A17A-2F6F714CD498}">
+											<Language>SFX</Language>
+											<AudioFile>stomp_hit.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="339216249"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="stomp_hit" ID="{305C7494-CFBB-4384-A17A-2F6F714CD498}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

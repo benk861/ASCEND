@@ -8,13 +8,29 @@
    {
     "Id": "393239870",
     "Type": "User",
-    "GUID": "{E9495B30-8B7A-4392-8AF5-84EC0F4B97AB}",
+    "GUID": "{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}",
     "Language": "SFX",
-    "Hash": "{4F558201-E9B1-3174-F92B-E4E4BD13016D}",
+    "Hash": "{474A0D6F-8F32-2F96-48E6-FBE19F4D0262}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
     "Media": [
+     {
+      "Id": "115031490",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "stomp_noise.wav",
+      "CachePath": "SFX/stomp_noise_908078E1.wem"
+     },
+     {
+      "Id": "339216249",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "stomp_hit.wav",
+      "CachePath": "SFX/stomp_hit_10C4C929.wem"
+     },
      {
       "Id": "574870632",
       "Language": "SFX",
@@ -38,10 +54,39 @@
         "Id": "574870632"
        }
       ]
+     },
+     {
+      "Id": "2391121158",
+      "Name": "Stomp_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Abilites\\Stomp\\Stomp_Hit",
+      "GUID": "{83962DD9-EA90-47C7-99B6-39FF53E933A8}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.43304166",
+      "DurationMax": "0.43304166",
+      "MediaRefs": [
+       {
+        "Id": "115031490"
+       },
+       {
+        "Id": "339216249"
+       }
+      ]
+     },
+     {
+      "Id": "10814438",
+      "Name": "Stomp_InAir",
+      "ObjectPath": "\\Events\\Default Work Unit\\Abilites\\Stomp\\Stomp_InAir",
+      "GUID": "{20903FB4-CE5F-42CE-AE5D-91C4EE65916F}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "115031490"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{4598C0E6-8CD4-A3C8-6240-D46DBAF43DF2}"
+  "FileHash": "{E4E8C164-1437-65D6-5094-D537898BDED8}"
  }
 }

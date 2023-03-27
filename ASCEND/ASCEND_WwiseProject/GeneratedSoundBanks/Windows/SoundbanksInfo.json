@@ -16,13 +16,29 @@
    {
     "Id": "393239870",
     "Type": "User",
-    "GUID": "{E9495B30-8B7A-4392-8AF5-84EC0F4B97AB}",
+    "GUID": "{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}",
     "Language": "SFX",
-    "Hash": "{4F558201-E9B1-3174-F92B-E4E4BD13016D}",
+    "Hash": "{474A0D6F-8F32-2F96-48E6-FBE19F4D0262}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
     "Media": [
+     {
+      "Id": "115031490",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "stomp_noise.wav",
+      "CachePath": "SFX/stomp_noise_908078E1.wem"
+     },
+     {
+      "Id": "339216249",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "stomp_hit.wav",
+      "CachePath": "SFX/stomp_hit_10C4C929.wem"
+     },
      {
       "Id": "574870632",
       "Language": "SFX",
@@ -46,6 +62,35 @@
         "Id": "574870632"
        }
       ]
+     },
+     {
+      "Id": "2391121158",
+      "Name": "Stomp_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\Abilites\\Stomp\\Stomp_Hit",
+      "GUID": "{83962DD9-EA90-47C7-99B6-39FF53E933A8}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.43304166",
+      "DurationMax": "0.43304166",
+      "MediaRefs": [
+       {
+        "Id": "115031490"
+       },
+       {
+        "Id": "339216249"
+       }
+      ]
+     },
+     {
+      "Id": "10814438",
+      "Name": "Stomp_InAir",
+      "ObjectPath": "\\Events\\Default Work Unit\\Abilites\\Stomp\\Stomp_InAir",
+      "GUID": "{20903FB4-CE5F-42CE-AE5D-91C4EE65916F}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "115031490"
+       }
+      ]
      }
     ]
    },
@@ -54,7 +99,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{986487A9-2683-E47A-8688-3D0FE6FDB954}",
+    "Hash": "{6FE20D43-1416-1D98-033A-82E29C851866}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -90,14 +135,13 @@
    {
     "Id": "3991942870",
     "Type": "User",
-    "GUID": "{AA2745A3-8D65-450B-AFA5-15F46679DF15}",
+    "GUID": "{5BDE35D4-3625-4ACD-9405-0A539A506E34}",
     "Language": "SFX",
-    "Hash": "{0E3E9487-2562-8161-CF73-30D6CFA3E27A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk"
    }
   ],
-  "FileHash": "{53090FDF-D9DB-D8B8-08B0-E0B37AB70E00}"
+  "FileHash": "{C13ADFC2-F659-C5FD-8F3D-462B7328D8F3}"
  }
 }

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" GUID="{E9495B30-8B7A-4392-8AF5-84EC0F4B97AB}" Language="SFX" Hash="{4F558201-E9B1-3174-F92B-E4E4BD13016D}">
+		<SoundBank Id="393239870" Type="User" GUID="{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}" Language="SFX" Hash="{474A0D6F-8F32-2F96-48E6-FBE19F4D0262}">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
+				<File Id="115031490" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stomp_noise.wav</ShortName>
+					<CachePath>SFX/stomp_noise_908078E1.wem</CachePath>
+				</File>
+				<File Id="339216249" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stomp_hit.wav</ShortName>
+					<CachePath>SFX/stomp_hit_10C4C929.wem</CachePath>
+				</File>
 				<File Id="574870632" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mine_explode.wav</ShortName>
 					<CachePath>SFX/mine_explode_10C4C929.wem</CachePath>
@@ -17,8 +25,19 @@
 						<MediaRef Id="574870632"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2391121158" Name="Stomp_Hit" ObjectPath="\Events\Default Work Unit\Abilites\Stomp\Stomp_Hit" GUID="{83962DD9-EA90-47C7-99B6-39FF53E933A8}" DurationType="OneShot" DurationMin="0.43304166" DurationMax="0.43304166">
+					<MediaRefs>
+						<MediaRef Id="115031490"/>
+						<MediaRef Id="339216249"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="10814438" Name="Stomp_InAir" ObjectPath="\Events\Default Work Unit\Abilites\Stomp\Stomp_InAir" GUID="{20903FB4-CE5F-42CE-AE5D-91C4EE65916F}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="115031490"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C1FA7622-B642-C258-77D9-D74341EA1F35}</FileHash>
+	<FileHash>{A103FDA3-9737-FD0E-7F94-4AC604D7FCFA}</FileHash>
 </SoundBanksInfo>
