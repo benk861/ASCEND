@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{80A33F61-7B48-4AEE-9F28-BC9DD937A055}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{80A33F61-7B48-4AEE-9F28-BC9DD937A055}" PersistMode="Standalone">
-			<ChildrenList>
-				<Folder Name="Abilites" ID="{7C172651-A449-4EF9-A65B-D8ED32F94782}" ShortID="878659088">
-					<ChildrenList>
-						<Folder Name="Stomp" ID="{218A89CB-BEC7-4630-869D-30812760A489}" ShortID="827174556"/>
-					</ChildrenList>
-				</Folder>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{80A33F61-7B48-4AEE-9F28-BC9DD937A055}" PersistMode="Standalone"/>
 	</States>
 </WwiseDocument>
