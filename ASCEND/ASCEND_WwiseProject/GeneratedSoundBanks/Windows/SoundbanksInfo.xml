@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" GUID="{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}" Language="SFX" Hash="{474A0D6F-8F32-2F96-48E6-FBE19F4D0262}">
+		<SoundBank Id="393239870" Type="User" GUID="{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}" Language="SFX" Hash="{F574F499-A484-90A2-8E8B-57A98495CEEC}">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -17,6 +17,10 @@
 				<File Id="115031490" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>stomp_noise.wav</ShortName>
 					<CachePath>SFX/stomp_noise_908078E1.wem</CachePath>
+				</File>
+				<File Id="315698191" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_stone.wav</ShortName>
+					<CachePath>SFX/step_stone_10C4C929.wem</CachePath>
 				</File>
 				<File Id="339216249" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>stomp_hit.wav</ShortName>
@@ -28,6 +32,11 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="1866025847" Name="Footstep" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Footstep" GUID="{614B9761-5F04-4450-AD52-13A27855E307}" DurationType="OneShot" DurationMin="0.4305475" DurationMax="0.43555027">
+					<MediaRefs>
+						<MediaRef Id="315698191"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3403979510" Name="Mine_Explode" ObjectPath="\Events\Default Work Unit\Abilites\Mine\Mine_Explode" GUID="{91E9F18C-E140-4971-9832-5637091598CA}" DurationType="OneShot" DurationMin="1.1611563" DurationMax="1.1719373">
 					<MediaRefs>
 						<MediaRef Id="574870632"/>
@@ -66,5 +75,5 @@
 			<Path>Music.bnk</Path>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1A96C70C-9397-187C-69CB-5F8607BC5CDD}</FileHash>
+	<FileHash>{46C0D64A-2B0C-F6E1-A5B6-24F0347528BC}</FileHash>
 </SoundBanksInfo>

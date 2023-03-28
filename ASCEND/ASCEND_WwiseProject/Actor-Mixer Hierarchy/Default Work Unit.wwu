@@ -123,6 +123,59 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Player" ID="{05A782C2-28B0-449E-B3DB-44573EBA8E7E}" ShortID="713271045">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="Footsteps" ID="{61E02C1C-2FCB-4414-831F-468BF9EB1AA0}" ShortID="101659143">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Sound Name="step_stone" ID="{31E9E5E3-EB09-407C-A696-40B93C90177F}" ShortID="143171272">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6194BBCF-BDD6-48D5-8AEE-AEBCE2C7FB70}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="10"/>
+															<Property Name="Min" Type="Real64" Value="-10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7678B275-AB76-43D5-BFF0-E60B6B800F67}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="step_stone" ID="{9066D7F2-DC34-4D51-988E-E98C4361A9F5}">
+											<Language>SFX</Language>
+											<AudioFile>step_stone.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="315698191"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="step_stone" ID="{9066D7F2-DC34-4D51-988E-E98C4361A9F5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

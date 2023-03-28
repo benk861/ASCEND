@@ -1,10 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	10814438	Stomp_InAir			\Default Work Unit\Abilites\Stomp\Stomp_InAir	
+	1866025847	Footstep			\Default Work Unit\Player\Footsteps\Footstep	
 	2391121158	Stomp_Hit			\Default Work Unit\Abilites\Stomp\Stomp_Hit	
 	3403979510	Mine_Explode			\Default Work Unit\Abilites\Mine\Mine_Explode	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	115031490	stomp_noise	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\stomp_noise_908078E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilites\Stomp\stomp_noise		289228
+	315698191	step_stone	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_stone_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\step_stone		83288
 	339216249	stomp_hit	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\stomp_hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilites\Stomp\stomp_hit		83368
 	574870632	Mine_Explode	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\mine_explode_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilites\Mine\Mine_Explode		223860
 

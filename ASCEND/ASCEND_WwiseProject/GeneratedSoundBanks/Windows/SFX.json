@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}",
     "Language": "SFX",
-    "Hash": "{474A0D6F-8F32-2F96-48E6-FBE19F4D0262}",
+    "Hash": "{F574F499-A484-90A2-8E8B-57A98495CEEC}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -22,6 +22,14 @@
       "Location": "Memory",
       "ShortName": "stomp_noise.wav",
       "CachePath": "SFX/stomp_noise_908078E1.wem"
+     },
+     {
+      "Id": "315698191",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_stone.wav",
+      "CachePath": "SFX/step_stone_10C4C929.wem"
      },
      {
       "Id": "339216249",
@@ -41,6 +49,20 @@
      }
     ],
     "Events": [
+     {
+      "Id": "1866025847",
+      "Name": "Footstep",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Footsteps\\Footstep",
+      "GUID": "{614B9761-5F04-4450-AD52-13A27855E307}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.4305475",
+      "DurationMax": "0.43555027",
+      "MediaRefs": [
+       {
+        "Id": "315698191"
+       }
+      ]
+     },
      {
       "Id": "3403979510",
       "Name": "Mine_Explode",
@@ -87,6 +109,6 @@
     ]
    }
   ],
-  "FileHash": "{E4E8C164-1437-65D6-5094-D537898BDED8}"
+  "FileHash": "{F19F4B7D-011B-354E-62B3-7114FAD5FFED}"
  }
 }

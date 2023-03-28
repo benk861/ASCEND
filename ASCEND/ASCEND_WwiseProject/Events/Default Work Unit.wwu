@@ -58,6 +58,29 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Player" ID="{826091CF-AB47-4B9B-B20F-285848AE72C6}" ShortID="530466819">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="4"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Folder Name="Footsteps" ID="{493E6706-9E77-483F-9E99-130AEDE6B5C5}" ShortID="22866331">
+							<ChildrenList>
+								<Event Name="Footstep" ID="{614B9761-5F04-4450-AD52-13A27855E307}">
+									<ChildrenList>
+										<Action Name="" ID="{3A9019DD-29BD-48D2-AADA-825803BC7845}" ShortID="990373314">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="step_stone" ID="{31E9E5E3-EB09-407C-A696-40B93C90177F}" WorkUnitID="{EEDB3B3F-7F2A-4DA3-A7CF-C557FE9D5F64}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
