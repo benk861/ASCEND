@@ -83,49 +83,53 @@ void AAbilityBase::OnOverlap(UPrimitiveComponent* OverlappedComponent, AActor* O
                              UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& Hit)
 {
 	Player = Cast<APlayerCharacter>(OtherActor);
-	UAbilityManager* AbilityManager = Player->GetAbilityManager();
-	if(!AbilityManager)
+	if (Player)
 	{
-		return;
-	}
-	if(Hand == EAbilityHand::Left)
-	{
-		if(!CheckContainment(AbilityManager->LeftHandAbilitiesArray))
+		UAbilityManager* AbilityManager = Player->GetAbilityManager();
+		if (!AbilityManager)
 		{
-			bPickIt = true;
-			AbilityManager->LeftHandAbilitiesArray.AddUnique(this);
-			Player->GetAbilityManager()->PickAbility(this);
+			return;
 		}
-		else
+		if (Hand == EAbilityHand::Left)
 		{
-			bPickIt = false;
-			Player->GetAbilityManager()->PickAbility(this);
-		}
-		
-	} else if(Hand == EAbilityHand::Right)
-	{
-		if(!CheckContainment(AbilityManager->RightHandAbilitiesArray))
-		{
-			bPickIt = true;
-			AbilityManager->LeftHandAbilitiesArray.AddUnique(this);
-			Player->GetAbilityManager()->PickAbility(this);
-		}
-		else
-		{
-			bPickIt = false;
-			Player->GetAbilityManager()->PickAbility(this);
-		}
-	}
+			if (!CheckContainment(AbilityManager->LeftHandAbilitiesArray))
+			{
+				bPickIt = true;
+				AbilityManager->LeftHandAbilitiesArray.AddUnique(this);
+				Player->GetAbilityManager()->PickAbility(this);
+			}
+			else
+			{
+				bPickIt = false;
+				Player->GetAbilityManager()->PickAbility(this);
+			}
 
-	if (bShouldBePicked)
-	{
-		PickupCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		if (AbilityPickedDelegate.IsBound())
-		{
-			AbilityPickedDelegate.Broadcast(this);
 		}
-		Sprite->SetHiddenInGame(true);
-		this->AttachToActor(Player, FAttachmentTransformRules::SnapToTargetIncludingScale);
+		else if (Hand == EAbilityHand::Right)
+		{
+			if (!CheckContainment(AbilityManager->RightHandAbilitiesArray))
+			{
+				bPickIt = true;
+				AbilityManager->LeftHandAbilitiesArray.AddUnique(this);
+				Player->GetAbilityManager()->PickAbility(this);
+			}
+			else
+			{
+				bPickIt = false;
+				Player->GetAbilityManager()->PickAbility(this);
+			}
+		}
+
+		if (bShouldBePicked)
+		{
+			PickupCollision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+			if (AbilityPickedDelegate.IsBound())
+			{
+				AbilityPickedDelegate.Broadcast(this);
+			}
+			Sprite->SetHiddenInGame(true);
+			this->AttachToActor(Player, FAttachmentTransformRules::SnapToTargetIncludingScale);
+		}
 	}
 }
 
