@@ -3,84 +3,8 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{F9A954D2-8750-4046-8E62-7F1FF7D9BD2B}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Abilites" ID="{E3FE6F3E-368E-44DE-B7B8-DB788AA6F492}" ShortID="960559288">
-					<ChildrenList>
-						<Folder Name="Mine" ID="{1CE50738-58AB-4BE4-94AF-E5555F1EF808}" ShortID="1002535356">
-							<ChildrenList>
-								<Event Name="Mine_Explode" ID="{91E9F18C-E140-4971-9832-5637091598CA}">
-									<ChildrenList>
-										<Action Name="" ID="{394ADBCF-0C90-466C-92AA-1BB545DB099B}" ShortID="435964989">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="Mine_Explode" ID="{FD5F11A2-B543-4127-81D4-09E1ED92130F}" WorkUnitID="{EEDB3B3F-7F2A-4DA3-A7CF-C557FE9D5F64}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-						<Folder Name="Stomp" ID="{C1010BAF-F4B8-4FF8-9E79-BBF0967CE719}" ShortID="584179980">
-							<ChildrenList>
-								<Event Name="Stomp_InAir" ID="{20903FB4-CE5F-42CE-AE5D-91C4EE65916F}">
-									<ChildrenList>
-										<Action Name="" ID="{5851D9E2-C37A-4FBA-8E9C-8DD58721C069}" ShortID="3936767">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="stomp_noise" ID="{D90FD8C7-C6C0-4529-A844-1EB4052F8CD9}" WorkUnitID="{EEDB3B3F-7F2A-4DA3-A7CF-C557FE9D5F64}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-								<Event Name="Stomp_Hit" ID="{83962DD9-EA90-47C7-99B6-39FF53E933A8}">
-									<ChildrenList>
-										<Action Name="" ID="{41C4E29D-B139-4C3A-9BF6-7980993576BC}" ShortID="243943890">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="stomp_hit" ID="{3EE6A930-2026-46C9-A6F3-32FB9D038B5E}" WorkUnitID="{EEDB3B3F-7F2A-4DA3-A7CF-C557FE9D5F64}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-										<Action Name="" ID="{5A6207DE-163D-4D33-95D7-633D27CEC38D}" ShortID="515645749">
-											<PropertyList>
-												<Property Name="ActionType" Type="int16" Value="2"/>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="stomp_noise" ID="{D90FD8C7-C6C0-4529-A844-1EB4052F8CD9}" WorkUnitID="{EEDB3B3F-7F2A-4DA3-A7CF-C557FE9D5F64}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Player" ID="{826091CF-AB47-4B9B-B20F-285848AE72C6}" ShortID="530466819">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="4"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Folder Name="Footsteps" ID="{493E6706-9E77-483F-9E99-130AEDE6B5C5}" ShortID="22866331">
-							<ChildrenList>
-								<Event Name="Footstep" ID="{614B9761-5F04-4450-AD52-13A27855E307}">
-									<ChildrenList>
-										<Action Name="" ID="{3A9019DD-29BD-48D2-AADA-825803BC7845}" ShortID="990373314">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="step_stone" ID="{31E9E5E3-EB09-407C-A696-40B93C90177F}" WorkUnitID="{EEDB3B3F-7F2A-4DA3-A7CF-C557FE9D5F64}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
-							</ChildrenList>
-						</Folder>
-					</ChildrenList>
-				</Folder>
+				<WorkUnit Name="Music" ID="{BEA01725-BED2-45F2-B2B9-3AAD9C1A0C3A}" PersistMode="Reference"/>
+				<WorkUnit Name="SFX" ID="{FBFBD6EF-DF15-4165-9C33-E375110CB8CF}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -1,12 +1,27 @@
 Event	ID	Name			Wwise Object Path	Notes
-	10814438	Stomp_InAir			\Default Work Unit\Abilites\Stomp\Stomp_InAir	
-	1866025847	Footstep			\Default Work Unit\Player\Footsteps\Footstep	
-	2391121158	Stomp_Hit			\Default Work Unit\Abilites\Stomp\Stomp_Hit	
-	3403979510	Mine_Explode			\Default Work Unit\Abilites\Mine\Mine_Explode	
+	10814438	Stomp_InAir			\Default Work Unit\SFX\Abilites\Stomp\Stomp_InAir	
+	684980302	SeaAmbient			\Default Work Unit\SFX\Environment\Ambients\SeaAmbient	
+	1866025847	Footstep			\Default Work Unit\SFX\Player\Footsteps\Footstep	
+	1873631952	LadderClimb			\Default Work Unit\SFX\Player\Ladder Climbing\LadderClimb	
+	2278257568	CityAmbient			\Default Work Unit\SFX\Environment\Ambients\CityAmbient	
+	2391121158	Stomp_Hit			\Default Work Unit\SFX\Abilites\Stomp\Stomp_Hit	
+	3262001568	LadderStopClimbing			\Default Work Unit\SFX\Player\Ladder Climbing\LadderStopClimbing	
+	3403979510	Mine_Explode			\Default Work Unit\SFX\Abilites\Mine\Mine_Explode	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	115031490	stomp_noise	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\stomp_noise_908078E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilites\Stomp\stomp_noise		289228
-	315698191	step_stone	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_stone_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\step_stone		83288
-	339216249	stomp_hit	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\stomp_hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilites\Stomp\stomp_hit		83368
-	574870632	Mine_Explode	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\mine_explode_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilites\Mine\Mine_Explode		223860
+	138647232	step_sound_6	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_sound_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps\step_sound_6		99572
+	249013073	step_sound_3	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_sound_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps\step_sound_3		97000
+	257117172	ladder_climb	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\ladder_climb_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Ladder Climbing\ladder_climb		1190716
+	277998277	step_sound_1	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_sound_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps\step_sound_1		101288
+	339216249	stomp_hit	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\stomp_hit_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilites\Stomp\stomp_hit		98796
+	347559403	SeaAmbient	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\Ambiance_Sea_Loop_Stereo_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Ambients\SeaAmbient		5753568
+	370584840	step_sound_7	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_sound_7_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps\step_sound_7		98716
+	386393109	NS01_002_Nature ambience with seaguls	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\NS01_002_Nature ambience with seaguls_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambients\CityAmbient\CityAmbient\NS01_002_Nature ambience with seaguls		23039840
+	409603631	step_sound_5	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_sound_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps\step_sound_5		91860
+	550505254	step_sound_2	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_sound_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps\step_sound_2		101288
+	574870632	Mine_Explode	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\mine_explode_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Abilites\Mine\Mine_Explode		251368
+	607086135	step_sound_8	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_sound_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps\step_sound_8		109860
+	706186536	step_sound_4	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\step_sound_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps\Footsteps\step_sound_4		111572
+	984507630	SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni	D:\UE4 - projekty\ASCEND\ASCEND\ASCEND_WwiseProject\.cache\Windows\SFX\SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Ambients\CityAmbient\CityAmbient\SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni		49301600
 

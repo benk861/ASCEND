@@ -8,14 +8,49 @@
    {
     "Id": "3991942870",
     "Type": "User",
-    "GUID": "{AA2745A3-8D65-450B-AFA5-15F46679DF15}",
+    "GUID": "{5BDE35D4-3625-4ACD-9405-0A539A506E34}",
     "Language": "SFX",
-    "Hash": "{0E3E9487-2562-8161-CF73-30D6CFA3E27A}",
+    "Hash": "{3B868E8B-0A22-0A77-285F-C6DC2C4A1305}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
-    "Path": "Music.bnk"
+    "Path": "Music.bnk",
+    "Media": [
+     {
+      "Id": "386393109",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "NS01_002_Nature ambience with seaguls.wav",
+      "CachePath": "SFX/NS01_002_Nature ambience with seaguls_D79FB2B7.wem"
+     },
+     {
+      "Id": "984507630",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni.wav",
+      "CachePath": "SFX/SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni_D79FB2B7.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2278257568",
+      "Name": "CityAmbient",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Ambients\\CityAmbient",
+      "GUID": "{00CEB696-C76E-4CA1-8501-5EE46C11A1F9}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "386393109"
+       },
+       {
+        "Id": "984507630"
+       }
+      ]
+     }
+    ]
    }
   ],
-  "FileHash": "{7B63B02B-2508-2CF1-D84A-96EACD6FE9BE}"
+  "FileHash": "{5374209E-BDCB-DEC1-9651-C8137655E4DA}"
  }
 }

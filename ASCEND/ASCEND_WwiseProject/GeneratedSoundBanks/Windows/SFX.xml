@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" GUID="{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}" Language="SFX" Hash="{F574F499-A484-90A2-8E8B-57A98495CEEC}">
+		<SoundBank Id="393239870" Type="User" GUID="{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}" Language="SFX" Hash="{AB295095-88E0-A462-C8A4-9EA8A837B559}">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
@@ -10,37 +10,109 @@
 					<ShortName>stomp_noise.wav</ShortName>
 					<CachePath>SFX/stomp_noise_908078E1.wem</CachePath>
 				</File>
-				<File Id="315698191" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_stone.wav</ShortName>
-					<CachePath>SFX/step_stone_10C4C929.wem</CachePath>
+				<File Id="138647232" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_sound_6.wav</ShortName>
+					<CachePath>SFX/step_sound_6_10C4C929.wem</CachePath>
+				</File>
+				<File Id="249013073" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_sound_3.wav</ShortName>
+					<CachePath>SFX/step_sound_3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="257117172" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ladder_climb.wav</ShortName>
+					<CachePath>SFX/ladder_climb_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="277998277" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_sound_1.wav</ShortName>
+					<CachePath>SFX/step_sound_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="339216249" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>stomp_hit.wav</ShortName>
 					<CachePath>SFX/stomp_hit_10C4C929.wem</CachePath>
 				</File>
+				<File Id="347559403" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambiance_Sea_Loop_Stereo.wav</ShortName>
+					<CachePath>SFX/Ambiance_Sea_Loop_Stereo_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="370584840" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_sound_7.wav</ShortName>
+					<CachePath>SFX/step_sound_7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="386393109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>NS01_002_Nature ambience with seaguls.wav</ShortName>
+					<CachePath>SFX/NS01_002_Nature ambience with seaguls_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="409603631" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_sound_5.wav</ShortName>
+					<CachePath>SFX/step_sound_5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="550505254" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_sound_2.wav</ShortName>
+					<CachePath>SFX/step_sound_2_10C4C929.wem</CachePath>
+				</File>
 				<File Id="574870632" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mine_explode.wav</ShortName>
 					<CachePath>SFX/mine_explode_10C4C929.wem</CachePath>
 				</File>
+				<File Id="607086135" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_sound_8.wav</ShortName>
+					<CachePath>SFX/step_sound_8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="706186536" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>step_sound_4.wav</ShortName>
+					<CachePath>SFX/step_sound_4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="984507630" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni.wav</ShortName>
+					<CachePath>SFX/SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni_D79FB2B7.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="1866025847" Name="Footstep" ObjectPath="\Events\Default Work Unit\Player\Footsteps\Footstep" GUID="{614B9761-5F04-4450-AD52-13A27855E307}" DurationType="OneShot" DurationMin="0.4305475" DurationMax="0.43555027">
+				<Event Id="2278257568" Name="CityAmbient" ObjectPath="\Events\Default Work Unit\SFX\Environment\Ambients\CityAmbient" GUID="{00CEB696-C76E-4CA1-8501-5EE46C11A1F9}" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="315698191"/>
+						<MediaRef Id="386393109"/>
+						<MediaRef Id="984507630"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3403979510" Name="Mine_Explode" ObjectPath="\Events\Default Work Unit\Abilites\Mine\Mine_Explode" GUID="{91E9F18C-E140-4971-9832-5637091598CA}" DurationType="OneShot" DurationMin="1.1611563" DurationMax="1.1719373">
+				<Event Id="1866025847" Name="Footstep" ObjectPath="\Events\Default Work Unit\SFX\Player\Footsteps\Footstep" GUID="{614B9761-5F04-4450-AD52-13A27855E307}" DurationType="OneShot" DurationMin="0.47713593" DurationMax="0.5820327">
+					<MediaRefs>
+						<MediaRef Id="138647232"/>
+						<MediaRef Id="249013073"/>
+						<MediaRef Id="277998277"/>
+						<MediaRef Id="370584840"/>
+						<MediaRef Id="409603631"/>
+						<MediaRef Id="550505254"/>
+						<MediaRef Id="607086135"/>
+						<MediaRef Id="706186536"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1873631952" Name="LadderClimb" ObjectPath="\Events\Default Work Unit\SFX\Player\Ladder Climbing\LadderClimb" GUID="{2EFF5B21-A2CF-44C5-8B81-AA13981D952E}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="257117172"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3262001568" Name="LadderStopClimbing" ObjectPath="\Events\Default Work Unit\SFX\Player\Ladder Climbing\LadderStopClimbing" GUID="{96D5D0C3-8C92-4BE0-90B8-B9FDEFE639FC}" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="257117172"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3403979510" Name="Mine_Explode" ObjectPath="\Events\Default Work Unit\SFX\Abilites\Mine\Mine_Explode" GUID="{91E9F18C-E140-4971-9832-5637091598CA}" DurationType="OneShot" DurationMin="1.3035163" DurationMax="1.3156191">
 					<MediaRefs>
 						<MediaRef Id="574870632"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2391121158" Name="Stomp_Hit" ObjectPath="\Events\Default Work Unit\Abilites\Stomp\Stomp_Hit" GUID="{83962DD9-EA90-47C7-99B6-39FF53E933A8}" DurationType="OneShot" DurationMin="0.43304166" DurationMax="0.43304166">
+				<Event Id="684980302" Name="SeaAmbient" ObjectPath="\Events\Default Work Unit\SFX\Environment\Ambients\SeaAmbient" GUID="{A389162B-037D-44F8-A6B7-20B612E80E65}" MaxAttenuation="10000" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="347559403"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2391121158" Name="Stomp_Hit" ObjectPath="\Events\Default Work Unit\SFX\Abilites\Stomp\Stomp_Hit" GUID="{83962DD9-EA90-47C7-99B6-39FF53E933A8}" DurationType="OneShot" DurationMin="0.51339585" DurationMax="0.51339585">
 					<MediaRefs>
 						<MediaRef Id="115031490"/>
 						<MediaRef Id="339216249"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="10814438" Name="Stomp_InAir" ObjectPath="\Events\Default Work Unit\Abilites\Stomp\Stomp_InAir" GUID="{20903FB4-CE5F-42CE-AE5D-91C4EE65916F}" DurationType="Infinite">
+				<Event Id="10814438" Name="Stomp_InAir" ObjectPath="\Events\Default Work Unit\SFX\Abilites\Stomp\Stomp_InAir" GUID="{20903FB4-CE5F-42CE-AE5D-91C4EE65916F}" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="115031490"/>
 					</MediaRefs>
@@ -48,5 +120,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C19974AD-F3D4-1F27-4037-0112B6FA71A1}</FileHash>
+	<FileHash>{416243DC-84B4-6C20-30D6-FA4FE3C5FDBD}</FileHash>
 </SoundBanksInfo>

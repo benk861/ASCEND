@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="3991942870" Type="User" GUID="{AA2745A3-8D65-450B-AFA5-15F46679DF15}" Language="SFX" Hash="{0E3E9487-2562-8161-CF73-30D6CFA3E27A}">
+		<SoundBank Id="3991942870" Type="User" GUID="{5BDE35D4-3625-4ACD-9405-0A539A506E34}" Language="SFX" Hash="{3B868E8B-0A22-0A77-285F-C6DC2C4A1305}">
 			<ObjectPath>\SoundBanks\Default Work Unit\Music</ObjectPath>
 			<ShortName>Music</ShortName>
 			<Path>Music.bnk</Path>
+			<Media>
+				<File Id="386393109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>NS01_002_Nature ambience with seaguls.wav</ShortName>
+					<CachePath>SFX/NS01_002_Nature ambience with seaguls_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="984507630" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni.wav</ShortName>
+					<CachePath>SFX/SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2278257568" Name="CityAmbient" ObjectPath="\Events\Default Work Unit\SFX\Environment\Ambients\CityAmbient" GUID="{00CEB696-C76E-4CA1-8501-5EE46C11A1F9}" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="386393109"/>
+						<MediaRef Id="984507630"/>
+					</MediaRefs>
+				</Event>
+			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{44DA27E0-C312-9B4E-7DC8-22116782D659}</FileHash>
+	<FileHash>{0C0254B5-DD61-F20D-0604-FAA0BE23022B}</FileHash>
 </SoundBanksInfo>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}",
     "Language": "SFX",
-    "Hash": "{F574F499-A484-90A2-8E8B-57A98495CEEC}",
+    "Hash": "{AB295095-88E0-A462-C8A4-9EA8A837B559}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -24,12 +24,36 @@
       "CachePath": "SFX/stomp_noise_908078E1.wem"
      },
      {
-      "Id": "315698191",
+      "Id": "138647232",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "step_stone.wav",
-      "CachePath": "SFX/step_stone_10C4C929.wem"
+      "ShortName": "step_sound_6.wav",
+      "CachePath": "SFX/step_sound_6_10C4C929.wem"
+     },
+     {
+      "Id": "249013073",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sound_3.wav",
+      "CachePath": "SFX/step_sound_3_10C4C929.wem"
+     },
+     {
+      "Id": "257117172",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "ladder_climb.wav",
+      "CachePath": "SFX/ladder_climb_D79FB2B7.wem"
+     },
+     {
+      "Id": "277998277",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sound_1.wav",
+      "CachePath": "SFX/step_sound_1_10C4C929.wem"
      },
      {
       "Id": "339216249",
@@ -40,37 +64,164 @@
       "CachePath": "SFX/stomp_hit_10C4C929.wem"
      },
      {
+      "Id": "347559403",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambiance_Sea_Loop_Stereo.wav",
+      "CachePath": "SFX/Ambiance_Sea_Loop_Stereo_D79FB2B7.wem"
+     },
+     {
+      "Id": "370584840",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sound_7.wav",
+      "CachePath": "SFX/step_sound_7_10C4C929.wem"
+     },
+     {
+      "Id": "386393109",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "NS01_002_Nature ambience with seaguls.wav",
+      "CachePath": "SFX/NS01_002_Nature ambience with seaguls_D79FB2B7.wem"
+     },
+     {
+      "Id": "409603631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sound_5.wav",
+      "CachePath": "SFX/step_sound_5_10C4C929.wem"
+     },
+     {
+      "Id": "550505254",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sound_2.wav",
+      "CachePath": "SFX/step_sound_2_10C4C929.wem"
+     },
+     {
       "Id": "574870632",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "mine_explode.wav",
       "CachePath": "SFX/mine_explode_10C4C929.wem"
+     },
+     {
+      "Id": "607086135",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sound_8.wav",
+      "CachePath": "SFX/step_sound_8_10C4C929.wem"
+     },
+     {
+      "Id": "706186536",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "step_sound_4.wav",
+      "CachePath": "SFX/step_sound_4_10C4C929.wem"
+     },
+     {
+      "Id": "984507630",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni.wav",
+      "CachePath": "SFX/SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni_D79FB2B7.wem"
      }
     ],
     "Events": [
      {
-      "Id": "1866025847",
-      "Name": "Footstep",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player\\Footsteps\\Footstep",
-      "GUID": "{614B9761-5F04-4450-AD52-13A27855E307}",
-      "DurationType": "OneShot",
-      "DurationMin": "0.4305475",
-      "DurationMax": "0.43555027",
+      "Id": "2278257568",
+      "Name": "CityAmbient",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Ambients\\CityAmbient",
+      "GUID": "{00CEB696-C76E-4CA1-8501-5EE46C11A1F9}",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "315698191"
+        "Id": "386393109"
+       },
+       {
+        "Id": "984507630"
+       }
+      ]
+     },
+     {
+      "Id": "1866025847",
+      "Name": "Footstep",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Footsteps\\Footstep",
+      "GUID": "{614B9761-5F04-4450-AD52-13A27855E307}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.47713593",
+      "DurationMax": "0.5820327",
+      "MediaRefs": [
+       {
+        "Id": "138647232"
+       },
+       {
+        "Id": "249013073"
+       },
+       {
+        "Id": "277998277"
+       },
+       {
+        "Id": "370584840"
+       },
+       {
+        "Id": "409603631"
+       },
+       {
+        "Id": "550505254"
+       },
+       {
+        "Id": "607086135"
+       },
+       {
+        "Id": "706186536"
+       }
+      ]
+     },
+     {
+      "Id": "1873631952",
+      "Name": "LadderClimb",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Ladder Climbing\\LadderClimb",
+      "GUID": "{2EFF5B21-A2CF-44C5-8B81-AA13981D952E}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "257117172"
+       }
+      ]
+     },
+     {
+      "Id": "3262001568",
+      "Name": "LadderStopClimbing",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Ladder Climbing\\LadderStopClimbing",
+      "GUID": "{96D5D0C3-8C92-4BE0-90B8-B9FDEFE639FC}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "MediaRefs": [
+       {
+        "Id": "257117172"
        }
       ]
      },
      {
       "Id": "3403979510",
       "Name": "Mine_Explode",
-      "ObjectPath": "\\Events\\Default Work Unit\\Abilites\\Mine\\Mine_Explode",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Abilites\\Mine\\Mine_Explode",
       "GUID": "{91E9F18C-E140-4971-9832-5637091598CA}",
       "DurationType": "OneShot",
-      "DurationMin": "1.1611563",
-      "DurationMax": "1.1719373",
+      "DurationMin": "1.3035163",
+      "DurationMax": "1.3156191",
       "MediaRefs": [
        {
         "Id": "574870632"
@@ -78,13 +229,26 @@
       ]
      },
      {
+      "Id": "684980302",
+      "Name": "SeaAmbient",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Ambients\\SeaAmbient",
+      "GUID": "{A389162B-037D-44F8-A6B7-20B612E80E65}",
+      "MaxAttenuation": "10000",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "347559403"
+       }
+      ]
+     },
+     {
       "Id": "2391121158",
       "Name": "Stomp_Hit",
-      "ObjectPath": "\\Events\\Default Work Unit\\Abilites\\Stomp\\Stomp_Hit",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Abilites\\Stomp\\Stomp_Hit",
       "GUID": "{83962DD9-EA90-47C7-99B6-39FF53E933A8}",
       "DurationType": "OneShot",
-      "DurationMin": "0.43304166",
-      "DurationMax": "0.43304166",
+      "DurationMin": "0.51339585",
+      "DurationMax": "0.51339585",
       "MediaRefs": [
        {
         "Id": "115031490"
@@ -97,7 +261,7 @@
      {
       "Id": "10814438",
       "Name": "Stomp_InAir",
-      "ObjectPath": "\\Events\\Default Work Unit\\Abilites\\Stomp\\Stomp_InAir",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Abilites\\Stomp\\Stomp_InAir",
       "GUID": "{20903FB4-CE5F-42CE-AE5D-91C4EE65916F}",
       "DurationType": "Infinite",
       "MediaRefs": [
@@ -109,6 +273,6 @@
     ]
    }
   ],
-  "FileHash": "{F19F4B7D-011B-354E-62B3-7114FAD5FFED}"
+  "FileHash": "{46D0484D-85CE-0A90-E6AA-8F4350DDC58E}"
  }
 }
