@@ -18,11 +18,19 @@
     "Type": "User",
     "GUID": "{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}",
     "Language": "SFX",
-    "Hash": "{AB295095-88E0-A462-C8A4-9EA8A837B559}",
+    "Hash": "{3E3ABAED-C917-FE9F-8D1A-2F8E55CAEEEE}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
     "Media": [
+     {
+      "Id": "40107270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "player_step_6.wav",
+      "CachePath": "SFX/player_step_6_10C4C929.wem"
+     },
      {
       "Id": "115031490",
       "Language": "SFX",
@@ -32,20 +40,28 @@
       "CachePath": "SFX/stomp_noise_908078E1.wem"
      },
      {
-      "Id": "138647232",
+      "Id": "129760385",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "step_sound_6.wav",
-      "CachePath": "SFX/step_sound_6_10C4C929.wem"
+      "ShortName": "player_step_7.wav",
+      "CachePath": "SFX/player_step_7_10C4C929.wem"
      },
      {
-      "Id": "249013073",
+      "Id": "131563023",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "step_sound_3.wav",
-      "CachePath": "SFX/step_sound_3_10C4C929.wem"
+      "ShortName": "player_step_1.wav",
+      "CachePath": "SFX/player_step_1_10C4C929.wem"
+     },
+     {
+      "Id": "191488719",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "player_step_8.wav",
+      "CachePath": "SFX/player_step_8_10C4C929.wem"
      },
      {
       "Id": "257117172",
@@ -56,12 +72,12 @@
       "CachePath": "SFX/ladder_climb_D79FB2B7.wem"
      },
      {
-      "Id": "277998277",
+      "Id": "328176488",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "step_sound_1.wav",
-      "CachePath": "SFX/step_sound_1_10C4C929.wem"
+      "ShortName": "player_step_10.wav",
+      "CachePath": "SFX/player_step_10_10C4C929.wem"
      },
      {
       "Id": "339216249",
@@ -80,12 +96,20 @@
       "CachePath": "SFX/Ambiance_Sea_Loop_Stereo_D79FB2B7.wem"
      },
      {
-      "Id": "370584840",
+      "Id": "368351798",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "step_sound_7.wav",
-      "CachePath": "SFX/step_sound_7_10C4C929.wem"
+      "ShortName": "player_step_9.wav",
+      "CachePath": "SFX/player_step_9_10C4C929.wem"
+     },
+     {
+      "Id": "376728411",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "player_step_2.wav",
+      "CachePath": "SFX/player_step_2_10C4C929.wem"
      },
      {
       "Id": "386393109",
@@ -96,20 +120,12 @@
       "CachePath": "SFX/NS01_002_Nature ambience with seaguls_D79FB2B7.wem"
      },
      {
-      "Id": "409603631",
+      "Id": "537517731",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "step_sound_5.wav",
-      "CachePath": "SFX/step_sound_5_10C4C929.wem"
-     },
-     {
-      "Id": "550505254",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "step_sound_2.wav",
-      "CachePath": "SFX/step_sound_2_10C4C929.wem"
+      "ShortName": "player_step_3.wav",
+      "CachePath": "SFX/player_step_3_10C4C929.wem"
      },
      {
       "Id": "574870632",
@@ -120,20 +136,12 @@
       "CachePath": "SFX/mine_explode_10C4C929.wem"
      },
      {
-      "Id": "607086135",
+      "Id": "725280168",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
-      "ShortName": "step_sound_8.wav",
-      "CachePath": "SFX/step_sound_8_10C4C929.wem"
-     },
-     {
-      "Id": "706186536",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "step_sound_4.wav",
-      "CachePath": "SFX/step_sound_4_10C4C929.wem"
+      "ShortName": "player_step_5.wav",
+      "CachePath": "SFX/player_step_5_10C4C929.wem"
      },
      {
       "Id": "984507630",
@@ -142,6 +150,14 @@
       "Location": "Memory",
       "ShortName": "SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni.wav",
       "CachePath": "SFX/SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni_D79FB2B7.wem"
+     },
+     {
+      "Id": "1065769762",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "player_step_4.wav",
+      "CachePath": "SFX/player_step_4_10C4C929.wem"
      }
     ],
     "Events": [
@@ -166,32 +182,38 @@
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Footsteps\\Footstep",
       "GUID": "{614B9761-5F04-4450-AD52-13A27855E307}",
       "DurationType": "OneShot",
-      "DurationMin": "0.47713593",
-      "DurationMax": "0.5820327",
+      "DurationMin": "0.30751312",
+      "DurationMax": "0.4147612",
       "MediaRefs": [
        {
-        "Id": "138647232"
+        "Id": "40107270"
        },
        {
-        "Id": "249013073"
+        "Id": "129760385"
        },
        {
-        "Id": "277998277"
+        "Id": "131563023"
        },
        {
-        "Id": "370584840"
+        "Id": "191488719"
        },
        {
-        "Id": "409603631"
+        "Id": "328176488"
        },
        {
-        "Id": "550505254"
+        "Id": "368351798"
        },
        {
-        "Id": "607086135"
+        "Id": "376728411"
        },
        {
-        "Id": "706186536"
+        "Id": "537517731"
+       },
+       {
+        "Id": "725280168"
+       },
+       {
+        "Id": "1065769762"
        }
       ]
      },
@@ -323,7 +345,6 @@
     "Type": "User",
     "GUID": "{5BDE35D4-3625-4ACD-9405-0A539A506E34}",
     "Language": "SFX",
-    "Hash": "{3B868E8B-0A22-0A77-285F-C6DC2C4A1305}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Music",
     "ShortName": "Music",
     "Path": "Music.bnk",
@@ -364,6 +385,6 @@
     ]
    }
   ],
-  "FileHash": "{E047E329-1203-8734-A962-97CB2276FD3E}"
+  "FileHash": "{55988AB9-8853-3982-D7B9-1C78CEB79014}"
  }
 }

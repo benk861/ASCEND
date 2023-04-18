@@ -141,6 +141,9 @@
 								<RandomSequenceContainer Name="Footsteps" ID="{20FC8085-D953-47D8-82C1-DDF8C530D252}" ShortID="734791774">
 									<PropertyList>
 										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-50</Value>
+											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
 													<Modifier Name="" ID="{119D33AE-2717-47A1-B4D6-47C678EE933A}">
@@ -163,7 +166,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="step_sound_1" ID="{DECE2261-BDF1-41A7-BE16-9FABA6543E90}" ShortID="372178371">
+										<Sound Name="player_step_1" ID="{1A80D7A3-BF91-4427-AFE7-D7BA764CD9AC}" ShortID="259402253">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
@@ -173,19 +176,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="step_sound_1" ID="{4D88E800-9779-4696-8B1D-C864D6AD6700}">
+												<AudioFileSource Name="player_step_1" ID="{F3877A86-4E8A-4A4D-AC47-2C9A4B3D107F}">
 													<Language>SFX</Language>
-													<AudioFile>step_sound_1.wav</AudioFile>
+													<AudioFile>player_step_1.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="277998277"/>
+														<MediaID ID="131563023"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="step_sound_1" ID="{4D88E800-9779-4696-8B1D-C864D6AD6700}" Platform="Linked"/>
+												<ActiveSource Name="player_step_1" ID="{F3877A86-4E8A-4A4D-AC47-2C9A4B3D107F}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="step_sound_2" ID="{75156883-0953-4B9E-AD79-B8D4E6845252}" ShortID="603274529">
+										<Sound Name="player_step_2" ID="{1AE0BCC5-905F-427C-B247-EE1C06130D87}" ShortID="70208204">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
@@ -195,19 +198,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="step_sound_2" ID="{8992B927-F9A8-40A5-840F-792B67513940}">
+												<AudioFileSource Name="player_step_2" ID="{83076D59-440D-4489-AB58-AAF837DA2112}">
 													<Language>SFX</Language>
-													<AudioFile>step_sound_2.wav</AudioFile>
+													<AudioFile>player_step_2.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="550505254"/>
+														<MediaID ID="376728411"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="step_sound_2" ID="{8992B927-F9A8-40A5-840F-792B67513940}" Platform="Linked"/>
+												<ActiveSource Name="player_step_2" ID="{83076D59-440D-4489-AB58-AAF837DA2112}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="step_sound_3" ID="{61048D50-524D-41DB-BA5E-A7B0D15AF216}" ShortID="646975942">
+										<Sound Name="player_step_3" ID="{113980B6-B23C-4EFF-890C-8756C2A1789F}" ShortID="1054326922">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
@@ -217,19 +220,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="step_sound_3" ID="{784431F1-A080-4E2C-9101-203A3DFC29C3}">
+												<AudioFileSource Name="player_step_3" ID="{051C080C-DC3D-4CDB-AA21-2FDDE798ADD6}">
 													<Language>SFX</Language>
-													<AudioFile>step_sound_3.wav</AudioFile>
+													<AudioFile>player_step_3.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="249013073"/>
+														<MediaID ID="537517731"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="step_sound_3" ID="{784431F1-A080-4E2C-9101-203A3DFC29C3}" Platform="Linked"/>
+												<ActiveSource Name="player_step_3" ID="{051C080C-DC3D-4CDB-AA21-2FDDE798ADD6}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="step_sound_4" ID="{2FA0EAD7-BA72-4BD2-910F-43440A6D509D}" ShortID="308006743">
+										<Sound Name="player_step_4" ID="{C0A43624-C461-434F-9D6B-ED568F024DF7}" ShortID="352132533">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
@@ -239,19 +242,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="step_sound_4" ID="{D948B8F8-06D1-48B0-AD84-846E855CD652}">
+												<AudioFileSource Name="player_step_4" ID="{5BA03949-1C6C-45B1-A81A-9E1914906336}">
 													<Language>SFX</Language>
-													<AudioFile>step_sound_4.wav</AudioFile>
+													<AudioFile>player_step_4.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="706186536"/>
+														<MediaID ID="1065769762"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="step_sound_4" ID="{D948B8F8-06D1-48B0-AD84-846E855CD652}" Platform="Linked"/>
+												<ActiveSource Name="player_step_4" ID="{5BA03949-1C6C-45B1-A81A-9E1914906336}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="step_sound_5" ID="{B1A950A5-A2EB-4E56-9144-21834BEF1A19}" ShortID="606170519">
+										<Sound Name="player_step_5" ID="{4F2C5461-5EB0-4EB5-9A20-206D4A599F84}" ShortID="95054855">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
@@ -261,19 +264,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="step_sound_5" ID="{7138DB32-8921-448F-AF3E-FF60529D1233}">
+												<AudioFileSource Name="player_step_5" ID="{A22F82A8-2BE2-463C-B425-2CAB7096EAE9}">
 													<Language>SFX</Language>
-													<AudioFile>step_sound_5.wav</AudioFile>
+													<AudioFile>player_step_5.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="409603631"/>
+														<MediaID ID="725280168"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="step_sound_5" ID="{7138DB32-8921-448F-AF3E-FF60529D1233}" Platform="Linked"/>
+												<ActiveSource Name="player_step_5" ID="{A22F82A8-2BE2-463C-B425-2CAB7096EAE9}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="step_sound_6" ID="{806BB4EF-C093-456B-9A92-C3BFC781ECCD}" ShortID="55398123">
+										<Sound Name="player_step_6" ID="{7A15B39B-A81B-4066-A7FF-4EF508767A3B}" ShortID="852952474">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
@@ -283,19 +286,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="step_sound_6" ID="{E2C18268-21CF-45D0-A004-395E24DA5B45}">
+												<AudioFileSource Name="player_step_6" ID="{56FE92D7-44D6-4827-B3A6-4C59BCE8D3D8}">
 													<Language>SFX</Language>
-													<AudioFile>step_sound_6.wav</AudioFile>
+													<AudioFile>player_step_6.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="138647232"/>
+														<MediaID ID="40107270"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="step_sound_6" ID="{E2C18268-21CF-45D0-A004-395E24DA5B45}" Platform="Linked"/>
+												<ActiveSource Name="player_step_6" ID="{56FE92D7-44D6-4827-B3A6-4C59BCE8D3D8}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="step_sound_7" ID="{B5E13BA7-1337-4974-B357-42ED39BB3B9D}" ShortID="968406118">
+										<Sound Name="player_step_7" ID="{CEFE08A3-4889-4357-BC5D-AFEAC5413191}" ShortID="590965470">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
@@ -305,19 +308,19 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="step_sound_7" ID="{831A03A7-6D16-4B1A-822F-CB30654E1F88}">
+												<AudioFileSource Name="player_step_7" ID="{90A7BCCE-63E3-4A9B-B268-57F71BC899AA}">
 													<Language>SFX</Language>
-													<AudioFile>step_sound_7.wav</AudioFile>
+													<AudioFile>player_step_7.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="370584840"/>
+														<MediaID ID="129760385"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="step_sound_7" ID="{831A03A7-6D16-4B1A-822F-CB30654E1F88}" Platform="Linked"/>
+												<ActiveSource Name="player_step_7" ID="{90A7BCCE-63E3-4A9B-B268-57F71BC899AA}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
-										<Sound Name="step_sound_8" ID="{A31E18E1-3B33-4D58-8746-BD88599A0268}" ShortID="934625757">
+										<Sound Name="player_step_8" ID="{83D06CCB-0923-4308-9E46-D1155A89490F}" ShortID="186053027">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
@@ -327,16 +330,60 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="step_sound_8" ID="{4E9E5BBE-5980-4896-A600-FA62DC5CC1DF}">
+												<AudioFileSource Name="player_step_8" ID="{A8071DC7-88A9-4269-AD03-9A40B1970C79}">
 													<Language>SFX</Language>
-													<AudioFile>step_sound_8.wav</AudioFile>
+													<AudioFile>player_step_8.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="607086135"/>
+														<MediaID ID="191488719"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="step_sound_8" ID="{4E9E5BBE-5980-4896-A600-FA62DC5CC1DF}" Platform="Linked"/>
+												<ActiveSource Name="player_step_8" ID="{A8071DC7-88A9-4269-AD03-9A40B1970C79}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_step_9" ID="{3FF5F03F-A77D-4194-A1F7-24A84B3CC25C}" ShortID="865054364">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7678B275-AB76-43D5-BFF0-E60B6B800F67}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_step_9" ID="{35C20580-E16E-4AB4-ACF1-4095ADD25C70}">
+													<Language>SFX</Language>
+													<AudioFile>player_step_9.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="368351798"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_step_9" ID="{35C20580-E16E-4AB4-ACF1-4095ADD25C70}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="player_step_10" ID="{1BCBCC26-2549-406B-847E-89306C3CF38B}" ShortID="271993120">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C1F9B9F5-7881-4BD1-BB58-76851E294870}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{7678B275-AB76-43D5-BFF0-E60B6B800F67}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="player_step_10" ID="{A637B524-CFAC-4AF2-89B2-DF25EC3CC445}">
+													<Language>SFX</Language>
+													<AudioFile>player_step_10.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="328176488"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="player_step_10" ID="{A637B524-CFAC-4AF2-89B2-DF25EC3CC445}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -392,7 +439,7 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>8</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>

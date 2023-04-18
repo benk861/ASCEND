@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="145">
 	<SoundBanks>
-		<SoundBank Id="393239870" Type="User" GUID="{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}" Language="SFX" Hash="{AB295095-88E0-A462-C8A4-9EA8A837B559}">
+		<SoundBank Id="393239870" Type="User" GUID="{BAA1E29E-0A20-408F-8B59-BA63A3AACF60}" Language="SFX" Hash="{3E3ABAED-C917-FE9F-8D1A-2F8E55CAEEEE}">
 			<ObjectPath>\SoundBanks\Default Work Unit\SFX</ObjectPath>
 			<ShortName>SFX</ShortName>
 			<Path>SFX.bnk</Path>
 			<Media>
+				<File Id="40107270" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_6.wav</ShortName>
+					<CachePath>SFX/player_step_6_10C4C929.wem</CachePath>
+				</File>
 				<File Id="115031490" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>stomp_noise.wav</ShortName>
 					<CachePath>SFX/stomp_noise_908078E1.wem</CachePath>
 				</File>
-				<File Id="138647232" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_sound_6.wav</ShortName>
-					<CachePath>SFX/step_sound_6_10C4C929.wem</CachePath>
+				<File Id="129760385" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_7.wav</ShortName>
+					<CachePath>SFX/player_step_7_10C4C929.wem</CachePath>
 				</File>
-				<File Id="249013073" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_sound_3.wav</ShortName>
-					<CachePath>SFX/step_sound_3_10C4C929.wem</CachePath>
+				<File Id="131563023" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_1.wav</ShortName>
+					<CachePath>SFX/player_step_1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="191488719" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_8.wav</ShortName>
+					<CachePath>SFX/player_step_8_10C4C929.wem</CachePath>
 				</File>
 				<File Id="257117172" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ladder_climb.wav</ShortName>
 					<CachePath>SFX/ladder_climb_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="277998277" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_sound_1.wav</ShortName>
-					<CachePath>SFX/step_sound_1_10C4C929.wem</CachePath>
+				<File Id="328176488" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_10.wav</ShortName>
+					<CachePath>SFX/player_step_10_10C4C929.wem</CachePath>
 				</File>
 				<File Id="339216249" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>stomp_hit.wav</ShortName>
@@ -34,37 +42,37 @@
 					<ShortName>Ambiance_Sea_Loop_Stereo.wav</ShortName>
 					<CachePath>SFX/Ambiance_Sea_Loop_Stereo_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="370584840" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_sound_7.wav</ShortName>
-					<CachePath>SFX/step_sound_7_10C4C929.wem</CachePath>
+				<File Id="368351798" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_9.wav</ShortName>
+					<CachePath>SFX/player_step_9_10C4C929.wem</CachePath>
+				</File>
+				<File Id="376728411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_2.wav</ShortName>
+					<CachePath>SFX/player_step_2_10C4C929.wem</CachePath>
 				</File>
 				<File Id="386393109" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>NS01_002_Nature ambience with seaguls.wav</ShortName>
 					<CachePath>SFX/NS01_002_Nature ambience with seaguls_D79FB2B7.wem</CachePath>
 				</File>
-				<File Id="409603631" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_sound_5.wav</ShortName>
-					<CachePath>SFX/step_sound_5_10C4C929.wem</CachePath>
-				</File>
-				<File Id="550505254" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_sound_2.wav</ShortName>
-					<CachePath>SFX/step_sound_2_10C4C929.wem</CachePath>
+				<File Id="537517731" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_3.wav</ShortName>
+					<CachePath>SFX/player_step_3_10C4C929.wem</CachePath>
 				</File>
 				<File Id="574870632" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>mine_explode.wav</ShortName>
 					<CachePath>SFX/mine_explode_10C4C929.wem</CachePath>
 				</File>
-				<File Id="607086135" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_sound_8.wav</ShortName>
-					<CachePath>SFX/step_sound_8_10C4C929.wem</CachePath>
-				</File>
-				<File Id="706186536" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>step_sound_4.wav</ShortName>
-					<CachePath>SFX/step_sound_4_10C4C929.wem</CachePath>
+				<File Id="725280168" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_5.wav</ShortName>
+					<CachePath>SFX/player_step_5_10C4C929.wem</CachePath>
 				</File>
 				<File Id="984507630" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni.wav</ShortName>
 					<CachePath>SFX/SON_Quad_City_Berlin_027 - Rooftop At Night In Residential Area, Calm, Faint Traffic, Churchbells At Top - Front Omni_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="1065769762" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>player_step_4.wav</ShortName>
+					<CachePath>SFX/player_step_4_10C4C929.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -74,16 +82,18 @@
 						<MediaRef Id="984507630"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1866025847" Name="Footstep" ObjectPath="\Events\Default Work Unit\SFX\Player\Footsteps\Footstep" GUID="{614B9761-5F04-4450-AD52-13A27855E307}" DurationType="OneShot" DurationMin="0.47713593" DurationMax="0.5820327">
+				<Event Id="1866025847" Name="Footstep" ObjectPath="\Events\Default Work Unit\SFX\Player\Footsteps\Footstep" GUID="{614B9761-5F04-4450-AD52-13A27855E307}" DurationType="OneShot" DurationMin="0.30751312" DurationMax="0.4147612">
 					<MediaRefs>
-						<MediaRef Id="138647232"/>
-						<MediaRef Id="249013073"/>
-						<MediaRef Id="277998277"/>
-						<MediaRef Id="370584840"/>
-						<MediaRef Id="409603631"/>
-						<MediaRef Id="550505254"/>
-						<MediaRef Id="607086135"/>
-						<MediaRef Id="706186536"/>
+						<MediaRef Id="40107270"/>
+						<MediaRef Id="129760385"/>
+						<MediaRef Id="131563023"/>
+						<MediaRef Id="191488719"/>
+						<MediaRef Id="328176488"/>
+						<MediaRef Id="368351798"/>
+						<MediaRef Id="376728411"/>
+						<MediaRef Id="537517731"/>
+						<MediaRef Id="725280168"/>
+						<MediaRef Id="1065769762"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1873631952" Name="LadderClimb" ObjectPath="\Events\Default Work Unit\SFX\Player\Ladder Climbing\LadderClimb" GUID="{2EFF5B21-A2CF-44C5-8B81-AA13981D952E}" DurationType="Infinite">
@@ -120,5 +130,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{416243DC-84B4-6C20-30D6-FA4FE3C5FDBD}</FileHash>
+	<FileHash>{637CBB32-2018-3648-F077-5DB8C1EB10BB}</FileHash>
 </SoundBanksInfo>
