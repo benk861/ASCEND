@@ -1,2 +1,4 @@
+[attr]lock filter=lfs diff=lfs merge=binary -text lockable
 *.wav filter=lfs diff=lfs merge=lfs -text
-*.uasset lockable
+*.uasset lock
+*.umap lock
