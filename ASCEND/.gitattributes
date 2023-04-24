@@ -1,2 +1,6 @@
 # Auto detect text files and perform LF normalization
+[attr]lock filter=lfs diff=lfs merge=binary -text lockable
 * text=auto
+*.wav filter=lfs diff=lfs merge=lfs -text
+*.uasset lock
+*.umap lock
